@@ -37,34 +37,36 @@ entity enable_generator is
            clk_3megas : out STD_LOGIC;
            en_2_cycles : out STD_LOGIC;
            en_4_cycles : out STD_LOGIC;
-           counter_out : out unsigned(1 downto 0));
+           counter_out : out unsigned(2 downto 0));
 end enable_generator;
 
 architecture Behavioral of enable_generator is
     -- Signals
-    signal count, next_count : unsigned(1 downto 0) := "00";
+    signal count, next_count : unsigned(2 downto 0);
     
 begin
     -- Register
-    process (clk_12megas)
+    process (clk_12megas, reset)
     begin
-        if rising_edge(clk_12megas) then
+        if reset = '1' then
+            count <= "000";
+        elsif rising_edge(clk_12megas) then
             count <= next_count;
         end if;
     end process;
     
     -- Next-state logic
-    next_count <= "00" when (reset = '1') else
-                  count + 1;
+    next_count <= count + 1 when count < 4 else
+                  "001";
     
     -- Output logic
-    clk_3megas <= '1' when (count = 1 or count = 2) else
+    clk_3megas <= '1' when (count = 2 or count = 3) else
                   '0';
                   
-    en_2_cycles <= '1' when (count = 0 or count = 2) else
+    en_2_cycles <= '1' when (count = 1 or count = 3) else
                    '0';
                    
-    en_4_cycles <= '1' when count = 1 else
+    en_4_cycles <= '1' when count = 2 else
                    '0';
     
     counter_out <= count;

@@ -42,7 +42,7 @@ architecture Behavioral of enable_generator_tb is
                clk_3megas : out STD_LOGIC;
                en_2_cycles : out STD_LOGIC;
                en_4_cycles : out STD_LOGIC;
-               counter_out : out unsigned (1 downto 0));
+               counter_out : out unsigned (2 downto 0));
     end component;
     
     -- Input signals
@@ -50,7 +50,7 @@ architecture Behavioral of enable_generator_tb is
     
     -- Output signals
     signal clk_250megas, en_2cycles, en_4cycles : STD_LOGIC;
-    signal counter_out : unsigned(1 downto 0);
+    signal counter_out : unsigned(2 downto 0);
     
     -- Constants for periodic signals
     constant PERIOD_1Ghz : time := 1ns;
