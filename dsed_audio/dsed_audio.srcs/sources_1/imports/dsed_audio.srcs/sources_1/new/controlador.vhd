@@ -25,7 +25,7 @@ use work.package_dsed.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -70,9 +70,58 @@ architecture Behavioral of controlador is
     -- clock wizard component declaration
     component clk_wiz_12mhz is
         Port ( clk_100Mhz : in STD_LOGIC;
-               
+               reset : in STD_LOGIC;
+               clk_12Mhz : out STD_LOGIC);
+    end component;  
+
+    -- signals declaration
+    signal clk_12Mhz, sample_out_ready : STD_LOGIC;
+    signal sample_out, sample_in : STD_LOGIC_VECTOR (sample_size -1 downto 0);
+    signal count, next_count : UNSIGNED(9 downto 0) := (others => '0');
+    signal first_time : STD_LOGIC := '1';
 
 begin
-
+    -- clk wizard instantiation
+    CLK_WIZ : clk_wiz_12mhz
+        port map ( clk_100Mhz => clk_100Mhz,
+                   reset => reset,
+                   clk_12Mhz => clk_12Mhz);
+                   
+    -- audio interface instantiation
+    AUDIO_INTER : audio_interface
+        port map ( clk_12megas => clk_12Mhz,
+                   reset => reset,
+                   record_enable => '1',
+                   sample_out => sample_out,
+                   sample_out_ready => sample_out_ready,
+                   micro_clk => micro_clk,
+                   micro_data => micro_data,
+                   micro_LR => micro_LR,
+                   play_enable => '1',
+                   sample_in => sample_in,
+                   jack_sd => jack_sd,
+                   jack_pwm => jack_pwm);
+                   
+    -- logic for sample_in and sample_out
+    -- register
+    
+    process (clk_12Mhz)
+    begin
+        if reset='1' then
+            count <= (others => '0');
+            first_time <= '1';
+        elsif rising_edge(clk_12Mhz) then
+            count <= next_count;
+        end if;
+    end process;
+    
+    -- next_state logic
+    next_count <= (others => '0') when (sample_out_ready='1' and count>=600) or (first_time='1' and sample_out_ready='1') else
+                   count + 1;
+    first_time <= '0' when (sample_out_ready='1');
+                   
+   -- output logic  
+    
+    sample_in <= sample_out when (sample_out_ready='1' and count>=600) or (sample_out_ready='1' and first_time='1');
 
 end Behavioral;
