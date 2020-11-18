@@ -112,7 +112,7 @@ begin
             first_time <= '1';
         elsif rising_edge(clk_12Mhz) then
             count <= next_count;
-        end if;
+        end if; 
     end process;
     
     -- next_state logic
