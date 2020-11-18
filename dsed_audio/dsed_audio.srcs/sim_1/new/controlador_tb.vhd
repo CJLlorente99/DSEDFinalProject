@@ -47,7 +47,7 @@ architecture Behavioral of controlador_tb is
                -- To/From the mini-jack
                jack_sd : out STD_LOGIC;
                jack_pwm : out STD_LOGIC);
-    end controlador;
+    end component;
     
     -- input signals declaration
     signal clk, reset, micro_data : STD_LOGIC;
@@ -59,7 +59,7 @@ architecture Behavioral of controlador_tb is
     constant PERIOD : time := 10ns;
     
     -- aux signals  
-    signal a,b,c : STD_LOGIC;
+--    signal a,b,c : STD_LOGIC := '0';
     
 begin
     -- DUT instantiation
@@ -73,7 +73,7 @@ begin
                    jack_pwm => jack_pwm);
 
     -- clk simulation process
-    clk_process : process()
+    clk_process : process
     begin
         clk <= '0';
         wait for PERIOD/2;
@@ -84,9 +84,9 @@ begin
     reset <= '1',
              '0' after 40ns;
              
-    a <= not a after 50ns;
-    b <= not b after 80ns;
-    c <= not c after 100ns;
-    micro_data <= a xor b xor c;
+--    a <= not a after 50ns;
+--    b <= not b after 80ns;
+--    c <= not c after 100ns;
+    micro_data <= '1';
 
 end Behavioral;

@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot clk_wiz_12mhz xil_defaultlib.clk_wiz_12mhz -log elaborate.log
