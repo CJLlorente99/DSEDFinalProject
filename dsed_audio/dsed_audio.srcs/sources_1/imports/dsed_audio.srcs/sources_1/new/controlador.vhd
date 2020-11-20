@@ -109,7 +109,6 @@ begin
     begin
         if reset='1' then
             count <= (others => '0');
-            first_time <= '1';
         elsif rising_edge(clk_12Mhz) then
             count <= next_count;
         end if; 

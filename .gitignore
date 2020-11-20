@@ -8,4 +8,5 @@ dsed_audio/dsed_audio.hw/*
 dsed_audio/vivado.*
 dsed_audio.runs/clk_wiz_12mhz_synth_1/*
 dsed_audio/dsed_audio.sim/behav/*
-
+dsed_audio/dsed_audio.runs/impl_1/*
+dsed_audio/dsed_audio.runs/synth_1/*

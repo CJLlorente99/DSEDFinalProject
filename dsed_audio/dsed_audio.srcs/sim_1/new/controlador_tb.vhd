@@ -59,7 +59,7 @@ architecture Behavioral of controlador_tb is
     constant PERIOD : time := 10ns;
     
     -- aux signals  
---    signal a,b,c : STD_LOGIC := '0';
+    signal a,b,c : STD_LOGIC := '0';
     
 begin
     -- DUT instantiation
@@ -84,9 +84,9 @@ begin
     reset <= '1',
              '0' after 40ns;
              
---    a <= not a after 50ns;
---    b <= not b after 80ns;
---    c <= not c after 100ns;
-    micro_data <= '1';
+    a <= not a after 50ns;
+    b <= not b after 80ns;
+    c <= not c after 100ns;
+    micro_data <= a xor b xor c;
 
 end Behavioral;
