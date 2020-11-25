@@ -36,8 +36,8 @@ entity enable_generator is
            reset : in STD_LOGIC;
            clk_3megas : out STD_LOGIC;
            en_2_cycles : out STD_LOGIC;
-           en_4_cycles : out STD_LOGIC;
-           counter_out : out unsigned(2 downto 0));
+           en_4_cycles : out STD_LOGIC);
+--           counter_out : out unsigned(2 downto 0));
 end enable_generator;
 
 architecture Behavioral of enable_generator is
@@ -69,6 +69,6 @@ begin
     en_4_cycles <= '1' when count = 2 else
                    '0';
     
-    counter_out <= count;
+--    counter_out <= count;
     
 end Behavioral;

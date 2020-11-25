@@ -12,15 +12,16 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.cache/wt} [current_project]
 set_property parent.project_path {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.xpr} [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
+read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_ooc.xdc}}]
-set_property is_locked true [get_files {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
+set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -68,32 +69,32 @@ write_checkpoint -force -noxdef clk_wiz_12mhz.dcp
 catch { report_utilization -file clk_wiz_12mhz_utilization_synth.rpt -pb clk_wiz_12mhz_utilization_synth.pb }
 
 if { [catch {
-  file copy -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz.dcp} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.dcp}
+  file copy -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz.dcp} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}
+  write_verilog -force -mode synth_stub {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}
+  write_vhdl -force -mode synth_stub {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.v}
+  write_verilog -force -mode funcsim {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.vhdl}
+  write_vhdl -force -mode funcsim {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -103,32 +104,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz.dcp} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.dcp}
+  file copy -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz.dcp} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_stub.v} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}
+  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_stub.v} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_stub.vhdl} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}
+  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_stub.vhdl} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_sim_netlist.v} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.v}
+  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_sim_netlist.v} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_sim_netlist.vhdl} {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.vhdl}
+  file rename -force {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.runs/clk_wiz_12mhz_synth_1/clk_wiz_12mhz_sim_netlist.vhdl} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -137,12 +138,12 @@ if { [catch {
 
 if {[file isdir {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}]} {
   catch { 
-    file copy -force {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}
+    file copy -force {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.v}} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}
   }
 }
 
 if {[file isdir {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}]} {
   catch { 
-    file copy -force {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}
+    file copy -force {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_stub.vhdl}} {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.ip_user_files/ip/clk_wiz_12mhz}
   }
 }

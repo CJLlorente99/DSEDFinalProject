@@ -1,16 +1,5 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity clk_wiz_12mhz_clk_wiz_12mhz_clk_wiz
-INFO: [VRFC 10-307] analyzing entity clk_wiz_12mhz
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/package_dsed.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity audio_interface
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/controlador.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity controlador
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity enable_generator
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity pwm
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sim_1/new/controlador_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity controlador_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sim_1/new/FSMD_microphone_SO_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_SO_tb

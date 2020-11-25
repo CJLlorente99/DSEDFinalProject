@@ -51,11 +51,11 @@ architecture Behavioral of FSMD_microphone_SO_tb is
     
     -- Signal declaration
     -- Input signals
-    signal clk_10megas,reset, enable_4_cycles, micro_data : STD_LOGIC;
+    signal clk_10megas,reset, enable_4_cycles, micro_data : STD_LOGIC := '0';
     
     -- Output signals
-    signal sample_out : STD_LOGIC_VECTOR (sample_size-1 downto 0);
-    signal sample_out_ready : STD_LOGIC;
+    signal sample_out : STD_LOGIC_VECTOR (sample_size-1 downto 0) := (others => '0');
+    signal sample_out_ready : STD_LOGIC := '0';
     
     -- Debugging output signals
 --    signal count, state_num : integer;

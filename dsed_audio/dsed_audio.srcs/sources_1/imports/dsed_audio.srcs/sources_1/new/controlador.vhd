@@ -62,6 +62,7 @@ architecture Behavioral of controlador is
                -- To/From the controller
                play_enable : in STD_LOGIC;
                sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+               sample_request : out STD_LOGIC;
                -- To/From the mini-jack
                jack_sd : out STD_LOGIC;
                jack_pwm : out STD_LOGIC);
@@ -75,10 +76,10 @@ architecture Behavioral of controlador is
     end component;  
 
     -- signals declaration
-    signal clk_12Mhz, sample_out_ready : STD_LOGIC;
-    signal sample_out, sample_in : STD_LOGIC_VECTOR (sample_size -1 downto 0);
+    signal clk_12Mhz, sample_out_ready, sample_request : STD_LOGIC;
+    signal sample_out, sample_in, next_sample_in : STD_LOGIC_VECTOR (sample_size -1 downto 0);
     signal count, next_count : UNSIGNED(9 downto 0) := (others => '0');
-    signal first_time : STD_LOGIC := '1';
+    signal first_time, next_first_time : STD_LOGIC := '1';
 
 begin
     -- clk wizard instantiation
@@ -99,28 +100,33 @@ begin
                    micro_LR => micro_LR,
                    play_enable => '1',
                    sample_in => sample_in,
+                   sample_request => sample_request,
                    jack_sd => jack_sd,
                    jack_pwm => jack_pwm);
                    
     -- logic for sample_in and sample_out
     -- register
     
-    process (clk_12Mhz)
+    process (clk_12Mhz, reset)
     begin
         if reset='1' then
             count <= (others => '0');
+            sample_in <= (others => '0');
+            first_time <= '1';
         elsif rising_edge(clk_12Mhz) then
             count <= next_count;
+            sample_in <= next_sample_in;
+            first_time <= next_first_time;
         end if; 
     end process;
     
     -- next_state logic
     next_count <= (others => '0') when (sample_out_ready='1' and count>=600) or (first_time='1' and sample_out_ready='1') else
                    count + 1;
-    first_time <= '0' when (sample_out_ready='1');
-                   
-   -- output logic  
+    next_first_time <= '0' when (sample_out_ready='1') else
+                       first_time;
     
-    sample_in <= sample_out when (sample_out_ready='1' and count>=600) or (sample_out_ready='1' and first_time='1');
+    next_sample_in <= sample_out when (sample_out_ready='1' and count>=600) or (sample_out_ready='1' and first_time='1') else
+                      sample_in;
 
 end Behavioral;
