@@ -49,7 +49,7 @@ architecture Behavioral of average_power_display is
 begin
 
     -- Register
-    process(clk_12megas) begin
+    process(clk_12megas, reset) begin
         if reset = '1' then
             count <= (others => '0');
             total_power <= (others => '0');
@@ -66,12 +66,11 @@ begin
     end process;
     -- Next state logic
     count_next <= count + 1;
-    total_power_next <= (total_power + unsigned(sample_in)) when count /= 1023 else to_unsigned(to_integer(unsigned(sample_in)), (sample_size + 10));
+    total_power_next <= (total_power + unsigned(sample_in)) when count /= 1023 else
+                         to_unsigned(to_integer(unsigned(sample_in)), (sample_size + 10));
     
     LED_output_next <= STD_LOGIC_VECTOR(total_power((sample_size + 9) downto (sample_size + 2)));
-    
-    
-    
+     
     -- Output logic
     LED <= LED_output;
 

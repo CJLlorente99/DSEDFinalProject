@@ -51,7 +51,10 @@ entity audio_interface is
            sample_request : out STD_LOGIC;
            -- To/From the mini-jack
            jack_sd : out STD_LOGIC;
-           jack_pwm : out STD_LOGIC);
+           jack_pwm : out STD_LOGIC;
+           --LED ports
+           --To/From PowerDisplay
+           LED : out STD_LOGIC_VECTOR (7 downto 0));
 end audio_interface;
 
 architecture Behavioral of audio_interface is
@@ -86,6 +89,14 @@ architecture Behavioral of audio_interface is
                en_4_cycles : out STD_LOGIC);
     end component;
     
+    component average_power_display is
+        Port ( clk_12megas : in STD_LOGIC;
+               reset : in STD_LOGIC;
+               sample_in : in STD_LOGIC_VECTOR(sample_size - 1 downto 0);
+               sample_request : in STD_LOGIC;
+               LED : out STD_LOGIC_VECTOR (7 downto 0));
+    end component; 
+    
     --pwm signals:
         signal en_2_cycles,pwm_pulse : STD_LOGIC;
         
@@ -94,6 +105,9 @@ architecture Behavioral of audio_interface is
         
     -- enable_generator signals:
         signal clk_3megas : STD_LOGIC;
+        
+    --sample request aux signal
+        signal s_request : STD_LOGIC;
         
 begin
 
@@ -106,7 +120,7 @@ begin
         reset => reset,
         en_2_cycles => en_2_cycles,
         sample_in => sample_in,
-        sample_request => sample_request,
+        sample_request => s_request,
         pwm_pulse => jack_pwm
     );
     
@@ -126,6 +140,14 @@ begin
         en_2_cycles => en_2_cycles,
         en_4_cycles => enable_4_cycles
     );
-
+    
+    U4 : average_power_display port map(
+        clk_12megas => clk_12megas,
+       reset => reset,
+       sample_in => sample_in,
+       sample_request => s_request,
+       LED => LED);
+       
+       sample_request <= s_request;
 
 end Behavioral;

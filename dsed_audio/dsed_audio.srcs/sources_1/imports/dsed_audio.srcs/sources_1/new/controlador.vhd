@@ -41,7 +41,9 @@ entity controlador is
            micro_LR : out STD_LOGIC;
            -- To/From the mini-jack
            jack_sd : out STD_LOGIC;
-           jack_pwm : out STD_LOGIC);
+           jack_pwm : out STD_LOGIC;
+           -- To/From PowerDisplay
+           LED : out STD_LOGIC_VECTOR (7 downto 0));
 end controlador;
 
 architecture Behavioral of controlador is
@@ -65,7 +67,10 @@ architecture Behavioral of controlador is
                sample_request : out STD_LOGIC;
                -- To/From the mini-jack
                jack_sd : out STD_LOGIC;
-               jack_pwm : out STD_LOGIC);
+               jack_pwm : out STD_LOGIC;
+              --LED ports
+              --To/From PowerDisplay
+              LED : out STD_LOGIC_VECTOR (7 downto 0));
     end component;
     
     -- clock wizard component declaration
@@ -102,7 +107,8 @@ begin
                    sample_in => sample_in,
                    sample_request => sample_request,
                    jack_sd => jack_sd,
-                   jack_pwm => jack_pwm);
+                   jack_pwm => jack_pwm,
+                   LED => LED);
                    
     -- logic for sample_in and sample_out
     -- register
