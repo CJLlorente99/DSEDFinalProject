@@ -1,6 +1,6 @@
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 57c794d15a2945ca9f5ce459fb299daf --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_SO_tb_behav xil_defaultlib.FSMD_microphone_SO_tb -log elaborate.log 
+Running: D:/Vivado/Instalacion/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 57c794d15a2945ca9f5ce459fb299daf --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot half_mul_tb_behav xil_defaultlib.half_mul_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -12,6 +12,6 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package xil_defaultlib.package_dsed
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_so_tb
-Built simulation snapshot FSMD_microphone_SO_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.half_mul [\half_mul(in_width=8,out_width=1...]
+Compiling architecture behavioral of entity xil_defaultlib.half_mul_tb
+Built simulation snapshot half_mul_tb_behav

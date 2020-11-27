@@ -2,13 +2,13 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Nov 25 13:45:22 2020
-# Process ID: 15064
-# Current directory: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/FSMD_microphone_SO_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
-# Journal file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
+# Start of session at: Fri Nov 27 13:20:30 2020
+# Process ID: 13172
+# Current directory: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/half_mul_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
+# Journal file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/carlo/Documents/Universidad/Cuarto -notrace
-couldn't read file "C:/Users/carlo/Documents/Universidad/Cuarto": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Wed Nov 25 13:45:22 2020...
+source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/half_mul_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 62.039 ; gain = 1.195
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 27 13:20:35 2020...
