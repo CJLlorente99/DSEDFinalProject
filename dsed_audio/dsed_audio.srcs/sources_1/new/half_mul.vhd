@@ -32,18 +32,21 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
 entity half_mul is
     Port ( 
         clk : in STD_LOGIC;
         reset : in STD_LOGIC;
         a : in STD_LOGIC_VECTOR ((sample_size-1) downto 0);
         b : in STD_LOGIC_VECTOR ((sample_size-1) downto 0);
-        c : out STD_LOGIC_VECTOR (((sample_size*2)-1) downto 0));
+        c : out STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0)); -- This attribute can only be this long
+                                                                  -- considering |b| < 1
 end half_mul;
 
 architecture Behavioral of half_mul is
     
-    signal mult, next_mult : signed (((sample_size*2)-1) downto 0) := (others => '0');
+    signal mult, next_mult : signed (((sample_size*2)-2) downto 0) := (others => '0');
+    signal aux : signed (((sample_size*2)-1) downto 0) := (others => '0');
 
 begin
 
@@ -57,7 +60,8 @@ begin
     end process;
     
     -- Next state logic
-        next_mult <= signed(a) * signed(b);
+        aux <= signed(a) * signed(b);
+        next_mult <= aux(((sample_size*2)-2) downto 0);
         
     -- Output Logic
         c <= STD_LOGIC_VECTOR(mult);
