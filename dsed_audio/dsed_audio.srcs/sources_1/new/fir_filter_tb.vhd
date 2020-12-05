@@ -104,6 +104,7 @@ begin
     end process;
     
     VALUES : process begin
+        -- 0.5
         reset <= '1';
         filter_select <= '0'; --LOW PASS
         wait for 13 ns;
@@ -137,6 +138,88 @@ begin
         sample_in <= "00000000";
         wait for 20*PERIOD;
         sample_in <= "01000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        
+        -- Max val
+        wait for 20*PERIOD;
+        filter_select <= '0'; --LOW PASS
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "01111111";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        filter_select <= '1'; --HIGH PASS
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "01111111";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        
+        -- Min values
+        wait for 20*PERIOD;
+        filter_select <= '0'; --LOW PASS
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "10000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        filter_select <= '1'; --HIGH PASS
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "00000000";
+        wait for 20*PERIOD;
+        sample_in <= "10000000";
         wait for 20*PERIOD;
         sample_in <= "00000000";
         wait for 20*PERIOD;
