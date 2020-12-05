@@ -43,13 +43,29 @@ architecture Behavioral of fir_filter_tb is
                sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
                sample_in_enable : in STD_LOGIC;
                filter_select : in STD_LOGIC;
+--               adder_res : out STD_LOGIC_VECTOR(sample_size*2 - 1 downto 0);
+--               hm_res : out STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0);
                sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
+--               ctrl : out STD_LOGIC_VECTOR (2 downto 0);
+--               x00 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x01 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x02 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x03 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x04 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
                sample_out_ready : out STD_LOGIC);
     end component;
     
     signal clk, reset, sample_in_enable, filter_select, sample_out_ready : STD_LOGIC := '0';
     signal sample_in, sample_out : STD_LOGIC_VECTOR (sample_size-1 downto 0) := (others => '0');
     
+    -- Debugging signals
+    
+--    signal hm_res : STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0);
+--    signal adder_res : STD_LOGIC_VECTOR (((sample_size*2)-1) downto 0);
+--    signal ctrl : STD_LOGIC_VECTOR (2 downto 0);
+--    signal x00, x01, x02, x03, x04 : STD_LOGIC_VECTOR (sample_size-1 downto 0);
+    
+    -- Timing constants
     constant PERIOD : time := 10 ns;
 
 begin
@@ -60,7 +76,15 @@ begin
         sample_in => sample_in,
         sample_in_enable => sample_in_enable,
         filter_select => filter_select,
+--        adder_res => adder_res,
+--        hm_res => hm_res,
         sample_out => sample_out,
+--        ctrl => ctrl,
+--        x00 => x00,
+--        x01 => x01,
+--        x02 => x02,
+--        x03 => x03,
+--        x04 => x04,
         sample_out_ready => sample_out_ready
     );
     
@@ -103,9 +127,9 @@ begin
         sample_in <= "00000000";
         wait for 20*PERIOD;
         
-        filter_select <= '1'; --HIGH PASS
         sample_in <= "00000000";
         wait for 20*PERIOD;
+        filter_select <= '1'; --HIGH PASS
         sample_in <= "00000000";
         wait for 20*PERIOD;
         sample_in <= "00000000";

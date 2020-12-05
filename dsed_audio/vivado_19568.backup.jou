@@ -2,30 +2,13 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Dec  4 20:09:45 2020
-# Process ID: 20564
+# Start of session at: Fri Nov 27 14:05:51 2020
+# Process ID: 19568
 # Current directory: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25100 C:\Users\carlo\Documents\Universidad\Cuarto curso\Primer Semestre\Diseo de sistemas electrnicos digitales\Proyecto final\Proyecto\dsed_audio\dsed_audio.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12768 C:\Users\carlo\Documents\Universidad\Cuarto curso\Primer Semestre\Diseo de sistemas electrnicos digitales\Proyecto final\Proyecto\dsed_audio\dsed_audio.xpr
 # Log file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/vivado.log
 # Journal file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.xpr}
 update_compile_order -fileset sources_1
-set_property top half_mul_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-launch_simulation
-launch_simulation
-source half_mul_tb.tcl
-close_sim
-set_property top fir_filter_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-source fir_filter_tb.tcl
-close_sim
-launch_simulation
-source fir_filter_tb.tcl
-close_sim

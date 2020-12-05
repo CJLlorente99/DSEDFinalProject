@@ -38,7 +38,15 @@ entity fir_filter is
            sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
            sample_in_enable : in STD_LOGIC;
            filter_select : in STD_LOGIC;
+--           adder_res : out STD_LOGIC_VECTOR(sample_size*2 - 1 downto 0);
+--           hm_res : out STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0);
            sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
+--           ctrl : out STD_LOGIC_VECTOR (2 downto 0);
+--           x00 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--           x01 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--           x02 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--           x03 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--           x04 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
            sample_out_ready : out STD_LOGIC);
 end fir_filter;
 
@@ -51,6 +59,13 @@ architecture Behavioral of fir_filter is
                filter_select : in STD_LOGIC; -- HIGH = 1   |  LOW = 0
                sample_enable : in STD_LOGIC;
                sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+--               adder_res : out STD_LOGIC_VECTOR(sample_size*2 - 1 downto 0);
+--               hm_res : out STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0);
+--               x00 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x01 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x02 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x03 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
+--               x04 : out STD_LOGIC_VECTOR(sample_size-1 downto 0);
                s : out STD_LOGIC_VECTOR (sample_size-1 downto 0)
            );
     end component;
@@ -77,6 +92,13 @@ begin
         filter_select => filter_select,
         sample_enable => sample_in_enable,
         sample_in => sample_in,
+--        adder_res => adder_res,
+--        hm_res => hm_res,
+--        x00 => x00,
+--        x01 => x01,
+--        x02 => x02,
+--        x03 => x03,
+--        x04 => x04,
         s => sample_out
     );
     
@@ -87,6 +109,8 @@ begin
         ctrl => ctrl,
         sample_out_ready => sample_out_ready
     );
+    
+--    ctrl <= ctrl_mid;
 
 
 end Behavioral;

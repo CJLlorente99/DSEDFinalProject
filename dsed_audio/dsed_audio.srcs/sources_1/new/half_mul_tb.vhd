@@ -43,7 +43,7 @@ component half_mul is
         reset : in STD_LOGIC;
         a : in STD_LOGIC_VECTOR ((sample_size-1) downto 0);
         b : in STD_LOGIC_VECTOR ((sample_size-1) downto 0);
-        c : out STD_LOGIC_VECTOR (((sample_size*2)-1) downto 0));
+        c : out STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0));
     end component;
 
     constant PERIOD : time := 10 ns;
@@ -52,7 +52,7 @@ component half_mul is
     
         signal clk, reset : STD_LOGIC := '0';
         signal a, b : STD_LOGIC_VECTOR ((sample_size-1) downto 0) := (others => '0');
-        signal c : STD_LOGIC_VECTOR (((sample_size*2)-1) downto 0);
+        signal c : STD_LOGIC_VECTOR (((sample_size*2)-2) downto 0);
 
 begin
 
@@ -78,8 +78,8 @@ begin
         a <= "00000000";
         b <= "11111111";
         wait for 10 ns;
-        a <= "11111111";
-        b <= "11111111";
+--        a <= "11111111";
+--        b <= "11111111";
         wait for 10 ns;
         a <= "01111111";
         b <= "01111111";
