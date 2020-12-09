@@ -167,8 +167,8 @@ begin
                     sum2 <= r1(sample_size * 2 - 2 downto 0);
                 when others =>
                     sum2 <= r1(sample_size * 2 - 2 downto 0);
-                end case;
-            end process;
+            end case;
+        end process;
         
         -- Adder ourput routing
         process (add)
