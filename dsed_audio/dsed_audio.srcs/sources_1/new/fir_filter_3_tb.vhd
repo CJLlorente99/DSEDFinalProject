@@ -124,7 +124,7 @@ begin
     
     
     READ_VALUES : process(clk_open) 
-        FILE in_file : text OPEN read_mode IS "D:\Vivado\Laboratorios\final_project\DSEDFinalProject\input_data\sample_in_haha_HP.dat";
+        FILE in_file : text OPEN read_mode IS "D:\Vivado\Laboratorios\final_project\DSEDFinalProject\input_data\sample_in_haha_LP.dat";
         variable in_line : line;
         variable in_read_ok : BOOLEAN;
         variable v_data_read            : t_integer_array(1 to NUM_COL);
@@ -152,9 +152,6 @@ begin
                 else 
                     filter_select <= '1';
                 end if;
-                
-                
-                
             else
                 assert false report "Simulation Finished" severity failure;
             end if;
@@ -162,15 +159,13 @@ begin
     end process;
     
     WRITE_VALUES : process(clk)
-        FILE out_file : text OPEN write_mode IS "D:\Vivado\Laboratorios\final_project\DSEDFinalProject\output_data\sample_out_haha_HP.dat";
+        FILE out_file : text OPEN write_mode IS "D:\Vivado\Laboratorios\final_project\DSEDFinalProject\output_data\sample_out_haha_LP.dat";
         variable out_line : line;
     begin
         if rising_edge(clk) then
             if sample_out_ready = '1' then
                 Write(out_line, to_integer(signed(sample_out)));
                 WriteLine(out_file, out_line);
-                
-                
             end if;
         end if;
     end process;
