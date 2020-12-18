@@ -109,10 +109,15 @@ architecture Behavioral of audio_interface is
     --sample request aux signal
         signal s_request : STD_LOGIC;
         
+    --pwm output aux signal
+        signal jack_pwm_auxiliar : STD_LOGIC;
+        
 begin
 
     jack_sd <= '1';
     micro_LR <= '1';
+    
+    
     
 
     U0 : pwm port map(
@@ -121,7 +126,7 @@ begin
         en_2_cycles => en_2_cycles,
         sample_in => sample_in,
         sample_request => s_request,
-        pwm_pulse => jack_pwm
+        pwm_pulse => jack_pwm_auxiliar
     );
     
     U1 : FSMD_microphone port map(
@@ -149,5 +154,6 @@ begin
        LED => LED);
        
        sample_request <= s_request;
+       jack_pwm <= play_enable and jack_pwm_auxiliar;
 
 end Behavioral;

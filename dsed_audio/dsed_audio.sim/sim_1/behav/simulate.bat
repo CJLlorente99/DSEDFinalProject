@@ -1,6 +1,6 @@
 @echo off
 set xv_path=D:\\Vivado\\Instalacion\\Vivado\\2017.2\\bin
-call %xv_path%/xsim ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch ram_tb.tcl -log simulate.log
+call %xv_path%/xsim pwm_tb_behav -key {Behavioral:sim_1:Functional:pwm_tb} -tclbatch pwm_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END
