@@ -2,11 +2,11 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Dec 18 11:44:24 2020
-# Process ID: 8624
-# Current directory: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/pwm_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
-# Journal file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
+# Start of session at: Wed Dec 23 13:01:40 2020
+# Process ID: 23272
+# Current directory: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/dsed_audio_1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/Proyecto/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/pwm_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/carlo/Documents/Universidad/Cuarto -notrace

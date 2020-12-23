@@ -196,17 +196,17 @@ begin
             act_address <= (others => '0');
             -- resetear los diferentes registros
         elsif rising_edge(clk_100Mhz) then
-            next_state <= state;
-            next_final_address <= final_address;
-            next_act_address <= act_address;
-            next_filter_select <= filter_select;
+            state <= next_state;
+            final_address <= next_final_address;
+            act_address <= next_act_address;
+            filter_select <= next_filter_select;
             -- update registers
         end if;
     end process;
     
     -- FSMD states logic
     -- RELLENAR LISTA DE SENSIBILIDAD
-    process(state)
+    process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, act_address, final_address, data_ram, filter_select, next_filter_select, data_filter)
     begin
     -- Default treatment
     
@@ -234,11 +234,10 @@ begin
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
                     -- algo que no entiendo del diagrama
-                    -- PONER BIEN LOS VALROES DE FILTER SELECT
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                 else
                     next_state <= idle;
@@ -283,7 +282,7 @@ begin
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                 else
                     next_state <= idle;
@@ -318,7 +317,7 @@ begin
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                 else
                     next_state <= idle;
@@ -359,7 +358,7 @@ begin
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                 else
                     next_state <= idle;
@@ -368,7 +367,7 @@ begin
         
         -- Play reverse
         
-        when play_forward =>
+        when play_reverse =>
             play_en <= '1'; -- Va a hacer falta registro, creo que esto se convierte en latch
             signal_speaker <= data_ram; -- lo mismo hace falta una señal intermedia antes de signal speaker
         
@@ -400,7 +399,7 @@ begin
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                 else
                     next_state <= idle;
@@ -431,7 +430,7 @@ begin
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
-                        next_filter_select <= '1';
+                        next_filter_select <= '0';
                     end if;
                     
                     if filter_select = next_filter_select then --quizas solucion es poner algo de lógica en vez de next_filter_select
