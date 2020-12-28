@@ -35,6 +35,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity fir_data_path is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
+           clear : IN STD_LOGIC;
            ctrl : in STD_LOGIC_VECTOR (2 downto 0);
            filter_select : in STD_LOGIC; -- HIGH = 1   |  LOW = 0
            sample_enable : in STD_LOGIC;
@@ -109,8 +110,15 @@ begin
                 
             elsif rising_edge(clk) then
                 r1 <= next_r1;
+                
+                if clear = '1' then
+                    x0 <= (others => '0');
+                    x1 <= (others => '0');
+                    x2 <= (others => '0');
+                    x3 <= (others => '0');
+                    x4 <= (others => '0');
                                 
-                if sample_enable = '1' then
+                elsif sample_enable = '1' then
                       x0 <= signed(sample_in);
                       x1 <= x0;
                       x2 <= x1;

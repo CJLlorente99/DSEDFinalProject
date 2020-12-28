@@ -35,6 +35,7 @@ entity controlador_fir is
     Port ( 
         clk : in STD_LOGIC;
         reset : in STD_LOGIC;
+        clear : in STD_LOGIC;
         sample_in_enable : in STD_LOGIC;
         ctrl : out STD_LOGIC_VECTOR(2 downto 0);
         sample_out_ready :out STD_LOGIC
@@ -64,6 +65,11 @@ begin
             state <= idle;
             sample_out_ready <= '0';
         elsif rising_edge(clk) then
+            if clear = '1' then
+                state <= idle;
+                sample_out_ready <= '0';
+            end if;
+            
             sample_out_ready <= next_sample_out_ready;
             state <= next_state;
         end if;

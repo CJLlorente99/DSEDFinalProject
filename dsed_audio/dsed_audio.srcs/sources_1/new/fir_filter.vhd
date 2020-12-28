@@ -55,6 +55,7 @@ architecture Behavioral of fir_filter is
     component fir_data_path is
         Port ( clk : in STD_LOGIC;
                reset : in STD_LOGIC;
+               clear : in STD_LOGIC;
                ctrl : in STD_LOGIC_VECTOR (2 downto 0);
                filter_select : in STD_LOGIC; -- HIGH = 1   |  LOW = 0
                sample_enable : in STD_LOGIC;
@@ -74,6 +75,7 @@ architecture Behavioral of fir_filter is
         Port ( 
             clk : in STD_LOGIC;
             reset : in STD_LOGIC;
+            clear : in STD_LOGIC;
             sample_in_enable : in STD_LOGIC;
             ctrl : out STD_LOGIC_VECTOR(2 downto 0);
             sample_out_ready :out STD_LOGIC
@@ -82,12 +84,15 @@ architecture Behavioral of fir_filter is
     
     -- fir_data_path signals:
         signal ctrl : STD_LOGIC_VECTOR(2 downto 0);
+        signal clear : STD_LOGIC;
+        signal act_filter_select : STD_LOGIC;
 
 begin
 
     U0 : fir_data_path port map(
         clk => clk,
         reset => reset,
+        clear => clear,
         ctrl => ctrl,
         filter_select => filter_select,
         sample_enable => sample_in_enable,
@@ -105,10 +110,25 @@ begin
     U1 : controlador_fir port map(
         clk => clk,
         reset => reset,
+        clear => clear,
         sample_in_enable => sample_in_enable,
         ctrl => ctrl,
         sample_out_ready => sample_out_ready
     );
+    
+    -- Logic that changes clear when filter_select changes
+    -- Register
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            act_filter_select <= filter_select;
+        end if;
+    end process;
+    
+    -- Output logic
+    
+    clear <= '1' when act_filter_select /= filter_select else
+             '0';       
     
 --    ctrl <= ctrl_mid;
 

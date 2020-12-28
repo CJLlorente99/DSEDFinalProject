@@ -122,11 +122,11 @@ architecture Behavioral of dsed_audio is
         -- RAM
         signal clka, ena : STD_LOGIC := '0';
         signal wea : STD_LOGIC_VECTOR(0 downto 0) := (others => '0');
-        signal addra : STD_LOGIC_VECTOR(18 downto 0) := (others => '0');
         signal dina : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
         signal data_ram : STD_LOGIC_VECTOR(7 downto 0);
         
         -- Filter
+        signal sample_in_filter : STD_LOGIC_VECTOR(7 downto 0);
         signal sample_in_enable, filter_select : STD_LOGIC := '0';
         signal data_filter : STD_LOGIC_VECTOR(7 downto 0);
         signal data_filter_ready : STD_LOGIC;
@@ -171,7 +171,7 @@ begin
         port map ( clka => clk_12Mhz,
                    ena => ena,
                    wea => wea,
-                   addra => addra,
+                   addra => std_logic_vector(act_address),
                    dina => data_audio,
                    douta => data_ram);
     
@@ -179,7 +179,7 @@ begin
     FILTER : fir_filter 
         port map ( clk => clk_12Mhz,
                    reset => reset,
-                   sample_in => data_ram,
+                   sample_in => sample_in_filter,
                    sample_in_enable => sample_in_enable,
                    filter_select => filter_select,
                    sample_out => data_filter,
@@ -233,7 +233,6 @@ begin
                     next_state <= filter1;
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    -- algo que no entiendo del diagrama
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
@@ -258,7 +257,7 @@ begin
         when record_save =>
             wea <= "1"; -- va  a hacer falta registro, esto es un latch
             next_final_address <= final_address + 1;
-            -- falta algo que no consigo leer del esquema
+            next_act_address <= act_address + 1;
             
             if BTNC = '1' then
                 next_state <= reset_mem;
@@ -277,8 +276,6 @@ begin
                     next_state <= filter1;
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    -- algo que no entiendo del diagrama
-                    -- PONER BIEN LOS VALROES DE FILTER SELECT
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
@@ -295,6 +292,7 @@ begin
             next_final_address <= (others => '0');
             next_act_address <= (others => '0');
             
+            -- CAJA VERDE
             if BTNC = '1' then
                 next_state <= reset_mem;
             elsif BTNL = '1' then
@@ -312,8 +310,6 @@ begin
                     next_state <= filter1;
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    -- algo que no entiendo del diagrama
-                    -- PONER BIEN LOS VALROES DE FILTER SELECT
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
@@ -328,8 +324,9 @@ begin
         
         when play_forward =>
             play_en <= '1'; -- Va a hacer falta registro, creo que esto se convierte en latch
-            signal_speaker <= data_ram; -- lo mismo hace falta una señal intermedia antes de signal speaker
+            signal_speaker <= data_ram;
         
+            
             if BTNC = '1' then
                 next_state <= reset_mem;
             elsif BTNL = '1' then
@@ -353,8 +350,6 @@ begin
                     next_state <= filter1;
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    -- algo que no entiendo del diagrama
-                    -- PONER BIEN LOS VALROES DE FILTER SELECT
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
@@ -394,8 +389,6 @@ begin
                     next_state <= filter1;
                     next_act_address <= (others => '0');
                     sample_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    -- algo que no entiendo del diagrama
-                    -- PONER BIEN LOS VALROES DE FILTER SELECT
                     if SW0 = '1' then
                         next_filter_select <= '1';
                     else
@@ -410,7 +403,7 @@ begin
         -- Filter1 is used to introduce new sample in the filter
         
         when filter1 =>
-            --sample_in <= not data_ram(sample_size-1) & data_ram(sample_size-2 downto 0); -- si se va a manejar por medio de enable creo que no hace falta
+            sample_in <= not data_ram(sample_size-1) & data_ram(sample_size-2 downto 0); -- si se va a manejar por medio de enable creo que no hace falta
             -- haría falta señal intermedia para realizar el cambio a complemento a 2
             if BTNC = '1' then
                 next_state <= reset_mem;
@@ -442,7 +435,6 @@ begin
                     else
                         next_act_address <= (others => '0');
                         sample_in_enable <= '1';
-                        -- algo que no entiendo del diagrama
                         next_state <= filter1;
                     end if;
                 else
@@ -479,7 +471,6 @@ begin
                         if act_address = final_address - 1 then
                             next_act_address <= (others => '0');
                             sample_in_enable <= '1';
-                            -- algo que no entiendo del diagrama
                         else
                             next_act_address <= act_address + 1;
                             sample_in_enable <= '1';

@@ -1,6 +1,8 @@
 %% Script que importa los datos procesados por el filtro implementado en la 
 % FPGA y los compara con los filtrados idealmente
 
+L = length(data) - 2;
+
 % Importar ficheros .dat
 
 data_out_FPGA_HP = load('../../output_data/sample_out_haha_HP.dat')./127;
@@ -61,7 +63,6 @@ avg_error_HP_2 = sum(error_HP.^2)/length(error_HP)
 
 % Original fft
 
-L = length(data) - 2;
 f = fs*(0:L/2)/L; % frequency array for right sided spectrum
 
 fftHaha = fft(data(2:end)); % compute fft

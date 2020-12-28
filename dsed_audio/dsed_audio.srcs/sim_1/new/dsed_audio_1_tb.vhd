@@ -65,7 +65,7 @@ architecture Behavioral of dsed_audio_1_tb is
     signal micro_clk, micro_LR, jack_sd, jack_pwm : STD_LOGIC := '0';
     
     -- Timing signals
-    constant PERIOD : time := 10ns;
+    constant PERIOD : time := 10ps;
     
 begin
     -- DUT instantiation
