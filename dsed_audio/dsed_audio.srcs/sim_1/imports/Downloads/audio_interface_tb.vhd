@@ -101,6 +101,8 @@ begin
     
     VALUES : process
     begin
+        record_enable <= '1';
+        play_enable <= '1';
         reset <= '1';
         wait for 100 us;
         reset <= '0';

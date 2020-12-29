@@ -101,7 +101,7 @@ architecture Behavioral of audio_interface is
         signal en_2_cycles,pwm_pulse : STD_LOGIC;
         
     -- FSMD_microphone signals:
-        signal enable_4_cycles : STD_LOGIC;
+        signal enable_4_cycles, auxiliar_enable : STD_LOGIC;
         
     -- enable_generator signals:
         signal clk_3megas : STD_LOGIC;
@@ -116,6 +116,8 @@ begin
 
     jack_sd <= '1';
     micro_LR <= '1';
+    
+    auxiliar_enable <= (enable_4_cycles and record_enable);
     
     
     
@@ -132,7 +134,7 @@ begin
     U1 : FSMD_microphone port map(
         clk_12megas => clk_12megas,
         reset => reset,
-        enable_4_cycles => enable_4_cycles,
+        enable_4_cycles => auxiliar_enable,
         micro_data => micro_data,
         sample_out => sample_out,
         sample_out_ready => sample_out_ready

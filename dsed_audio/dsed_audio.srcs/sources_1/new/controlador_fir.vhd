@@ -68,10 +68,10 @@ begin
             if clear = '1' then
                 state <= idle;
                 sample_out_ready <= '0';
+            else
+                sample_out_ready <= next_sample_out_ready;
+                state <= next_state;
             end if;
-            
-            sample_out_ready <= next_sample_out_ready;
-            state <= next_state;
         end if;
     end process;
     

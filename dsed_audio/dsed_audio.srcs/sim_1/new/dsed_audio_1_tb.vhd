@@ -38,7 +38,7 @@ end dsed_audio_1_tb;
 
 architecture Behavioral of dsed_audio_1_tb is
     -- Component declaration
-    component dsed_audio is
+component dsed_audio is
         Port ( clk_100Mhz : in STD_LOGIC;
                reset : in STD_LOGIC;
                -- Control ports
@@ -54,7 +54,17 @@ architecture Behavioral of dsed_audio_1_tb is
                -- To/From the mini_jack
                jack_sd : out STD_LOGIC;
                jack_pwm : out STD_LOGIC;
-               LED : out STD_LOGIC_VECTOR(7 downto 0)
+               LED : out STD_LOGIC_VECTOR(7 downto 0);
+               
+               -- Debugging signals
+               dina_a : out STD_LOGIC_VECTOR(7 downto 0);
+               wea_a : out STD_LOGIC_VECTOR(0 downto 0);
+               ena_a : out STD_LOGIC;
+               addra_a : out STD_LOGIC_VECTOR(18 downto 0);
+               douta_a : out STD_LOGIC_VECTOR(7 downto 0);
+               
+               rec_enable : out STD_LOGIC;
+               reco_ready : out STD_LOGIC
                );
     end component;
     
@@ -63,6 +73,13 @@ architecture Behavioral of dsed_audio_1_tb is
     
     -- Outputs
     signal micro_clk, micro_LR, jack_sd, jack_pwm : STD_LOGIC := '0';
+    
+    signal ena_a : STD_LOGIC := '1';
+    signal dina_a, douta_a : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+    signal wea_a : STD_LOGIC_VECTOR(0 downto 0) := (others => '0');
+    signal addra_a : STD_LOGIC_VECTOR(18 downto 0) := (others => '0');
+    
+    signal rec_enable, reco_ready : STD_LOGIC := '1';
     
     -- Timing signals
     constant PERIOD : time := 10ps;
@@ -85,7 +102,14 @@ begin
         -- To/From the mini_jack
         jack_sd => jack_sd,
         jack_pwm => jack_pwm,
-        LED => open
+        LED => open, 
+        
+        ena_a => ena_a,
+        dina_a => dina_a,
+        douta_a => douta_a,
+        wea_a => wea_a,
+        addra_a => addra_a
+        
         );
         
     -- CLK process
@@ -109,14 +133,14 @@ begin
     BTNR <= '0',
             '1' after 10us;
             
-    SW0 <= '0'; -- Play forward
---           '1' after 30us, -- Play reverse
---           '0' after 50us, -- Filter LP
---           '1' after 70us; -- Filter HP
+    SW0 <= '0', -- Play forward
+           '1' after 30us, -- Play reverse
+           '0' after 50us, -- Filter LP
+           '1' after 70us; -- Filter HP
            
-    SW1 <= '0'; -- Play forward
---           '0' after 30us, -- Play reverse
---           '1' after 50us, -- Filter LP
---           '1' after 70us; -- Filter HP
+    SW1 <= '0', -- Play forward
+           '0' after 30us, -- Play reverse
+           '1' after 50us, -- Filter LP
+           '1' after 70us; -- Filter HP
 
 end Behavioral;

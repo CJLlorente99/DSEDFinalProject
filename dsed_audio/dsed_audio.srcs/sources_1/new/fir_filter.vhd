@@ -84,7 +84,7 @@ architecture Behavioral of fir_filter is
     
     -- fir_data_path signals:
         signal ctrl : STD_LOGIC_VECTOR(2 downto 0);
-        signal clear : STD_LOGIC;
+        signal clear_aux : STD_LOGIC;
         signal act_filter_select : STD_LOGIC;
 
 begin
@@ -92,7 +92,7 @@ begin
     U0 : fir_data_path port map(
         clk => clk,
         reset => reset,
-        clear => clear,
+        clear => clear_aux,
         ctrl => ctrl,
         filter_select => filter_select,
         sample_enable => sample_in_enable,
@@ -110,7 +110,7 @@ begin
     U1 : controlador_fir port map(
         clk => clk,
         reset => reset,
-        clear => clear,
+        clear => clear_aux,
         sample_in_enable => sample_in_enable,
         ctrl => ctrl,
         sample_out_ready => sample_out_ready
@@ -127,7 +127,7 @@ begin
     
     -- Output logic
     
-    clear <= '1' when act_filter_select /= filter_select else
+    clear_aux <= '1' when act_filter_select /= filter_select else
              '0';       
     
 --    ctrl <= ctrl_mid;
