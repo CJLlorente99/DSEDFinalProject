@@ -58,7 +58,8 @@ entity dsed_audio is
            douta_a : out STD_LOGIC_VECTOR(7 downto 0);
            
            rec_enable : out STD_LOGIC;
-           reco_ready : out STD_LOGIC
+           reco_ready : out STD_LOGIC; 
+           state_aux : out STD_LOGIC_VECTOR(2 downto 0)
            
            
            );
@@ -206,7 +207,14 @@ begin
        reco_ready <= rec_ready;
        rec_enable <= record_en;
        
-       
+       state_aux <= "000" when state = idle else
+                     "001" when state = filter1 else
+                     "010" when state = filter2 else
+                     "011" when state = record_sampling else
+                     "100" when state = record_save else
+                     "101" when state = reset_mem else
+                     "110" when state = play_forward else
+                     "111";
                
    ena <= '1';
                    

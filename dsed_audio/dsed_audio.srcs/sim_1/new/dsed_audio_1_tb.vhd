@@ -64,7 +64,8 @@ component dsed_audio is
                douta_a : out STD_LOGIC_VECTOR(7 downto 0);
                
                rec_enable : out STD_LOGIC;
-               reco_ready : out STD_LOGIC
+               reco_ready : out STD_LOGIC;
+               state_aux : out STD_LOGIC_VECTOR(2 downto 0)
                );
     end component;
     
@@ -80,6 +81,10 @@ component dsed_audio is
     signal addra_a : STD_LOGIC_VECTOR(18 downto 0) := (others => '0');
     
     signal rec_enable, reco_ready : STD_LOGIC := '1';
+    
+    signal state_aux : std_logic_vector(2 downto 0) := "000";
+    
+    signal a, b, c : std_logic := '0';
     
     -- Timing signals
     constant PERIOD : time := 10ps;
@@ -108,7 +113,11 @@ begin
         dina_a => dina_a,
         douta_a => douta_a,
         wea_a => wea_a,
-        addra_a => addra_a
+        addra_a => addra_a,
+        
+        rec_enable => rec_enable,
+        reco_ready => reco_ready,
+        state_aux => state_aux
         
         );
         
@@ -125,7 +134,12 @@ begin
     reset <= '1',
              '0' after 10ns;
     -- First record some samples
-    micro_data <= '1';
+    
+    a <= not a after 130 ns;
+    b <= not b after 210 ns;
+    c <= not c after 370 ns;
+    micro_data <= a xor b xor c;
+    
     BTNL <= '1',
             '0' after 10us;
             
