@@ -59,9 +59,9 @@ entity dsed_audio is
            
            rec_enable : out STD_LOGIC;
            reco_ready : out STD_LOGIC; 
-           state_aux : out STD_LOGIC_VECTOR(2 downto 0)
+           state_aux : out STD_LOGIC_VECTOR(2 downto 0);
            
-           
+           sample_request_aux : out std_logic
            );
 end dsed_audio;
 
@@ -140,7 +140,7 @@ architecture Behavioral of dsed_audio is
         
         -- Filter
         signal sample_in_filter : STD_LOGIC_VECTOR(7 downto 0);
-        signal filter_in_enable, filter_select : STD_LOGIC := '0';
+        signal filter_in_enable, next_filter_in_enable, filter_select : STD_LOGIC := '0';
         signal data_filter : STD_LOGIC_VECTOR(7 downto 0);
         signal data_filter_ready : STD_LOGIC;
         
@@ -205,7 +205,9 @@ begin
        douta_a <= data_ram;
        
        reco_ready <= rec_ready;
-       rec_enable <= record_en;
+       rec_enable <= play_en;
+       
+       sample_request_aux <= sample_request;
        
        state_aux <= "000" when state = idle else
                      "001" when state = filter1 else
@@ -221,25 +223,26 @@ begin
                    
     -- FSMD logic
     -- Register
-    process(clk_100Mhz, reset)
+    process(clk_12Mhz, reset)
     begin
         if reset = '1' then
             state <= idle;
             final_address <= (others => '0');
             act_address <= (others => '0');
             -- resetear los diferentes registros
-        elsif rising_edge(clk_100Mhz) then
+        elsif rising_edge(clk_12Mhz) then
             state <= next_state;
             final_address <= next_final_address;
             act_address <= next_act_address;
             filter_select <= next_filter_select;
+            filter_in_enable <= next_filter_in_enable;
             -- update registers
-        end if;
+        end if;     
     end process;
     
     -- FSMD states logic
     -- RELLENAR LISTA DE SENSIBILIDAD
-    process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, act_address, final_address, data_ram, filter_select, next_filter_select, data_filter, data_filter_ready)
+    process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, data_ram, filter_select, data_filter, data_filter_ready)
     begin
     -- Default treatment
         play_en <= '0';
@@ -249,7 +252,7 @@ begin
         next_filter_select <= filter_select;
         next_act_address <= act_address;
         wea <= "0";
-        filter_in_enable <= '0';
+        next_filter_in_enable <= '0';
         
         
     -- Case structure for state and transition logic
@@ -276,13 +279,8 @@ begin
                 elsif SW1 = '1' then    
                     next_state <= filter1;
                     next_act_address <= (others => '0');
-                    filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    
-                    if SW0 = '1' then    
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
+                    next_filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
+                    next_filter_select <= SW0;
                 else                    
                     next_state <= idle;
                 end if;
@@ -324,12 +322,8 @@ begin
                 elsif SW1 = '1' then
                     next_state <= filter1;
                     next_act_address <= (others => '0');
-                    filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    if SW0 = '1' then
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
+                    next_filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
+                    next_filter_select <= SW0;
                 else
                     next_state <= idle;
                 end if;
@@ -362,12 +356,8 @@ begin
                 elsif SW1 = '1' then
                     next_state <= filter1;
                     next_act_address <= (others => '0'); -- En este caso es algo innecesario, pero podríamos dejarlo por guardar el paralelismo entre las cajas verdes
-                    filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    if SW0 = '1' then
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
+                    next_filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
+                    next_filter_select <= SW0;
                 else
                     next_state <= idle;
                 end if;
@@ -406,12 +396,8 @@ begin
                 elsif SW1 = '1' then
                     next_state <= filter1;
                     next_act_address <= (others => '0');
-                    filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    if SW0 = '1' then
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
+                    next_filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
+                    next_filter_select <= SW0;
                 else
                     next_state <= idle;
                 end if;
@@ -450,12 +436,8 @@ begin
                 elsif SW1 = '1' then
                     next_state <= filter1;
                     next_act_address <= (others => '0');
-                    filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
-                    if SW0 = '1' then
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
+                    next_filter_in_enable <= '1'; -- del fir_filter; casi seguro que va a necesitar de un registro
+                    next_filter_select <= SW0;
                 else
                     next_state <= idle;
                 end if;
@@ -487,13 +469,10 @@ begin
                 elsif SW1 = '1' then
                     ------------------------------------
                     -- CUIDADO, ESTO TIENE MALA PINTA
-                    if SW0 = '1' then
-                        next_filter_select <= '1';
-                    else
-                        next_filter_select <= '0';
-                    end if;
                     
-                    if filter_select = next_filter_select then --quizas solucion es poner algo de lógica en vez de next_filter_select
+                    next_filter_select <= SW0;
+                    
+                    if filter_select = SW0 then --quizas solucion es poner algo de lógica en vez de next_filter_select
                         if data_filter_ready = '1' then
                             next_state <= filter2;
                         else
@@ -501,7 +480,7 @@ begin
                         end if;
                     else
                         next_act_address <= (others => '0');
-                        filter_in_enable <= '1';
+                        next_filter_in_enable <= '1';
                         next_state <= filter1;
                     end if;
                     ------------------------------------
@@ -539,12 +518,13 @@ begin
                 elsif SW1 = '1' then
                     if sample_request = '1' then
                         next_state <= filter1;
+                        next_filter_in_enable <= '1';
                         if act_address = final_address - 1 then
                             next_act_address <= (others => '0');
-                            filter_in_enable <= '1';
+                            next_filter_in_enable <= '1';
                         else
                             next_act_address <= act_address + 1;
-                            filter_in_enable <= '1';
+                            next_filter_in_enable <= '1';
                         end if;
                     else
                         next_state <= filter2;

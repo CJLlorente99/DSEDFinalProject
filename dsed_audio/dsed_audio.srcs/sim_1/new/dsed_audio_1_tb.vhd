@@ -65,7 +65,9 @@ component dsed_audio is
                
                rec_enable : out STD_LOGIC;
                reco_ready : out STD_LOGIC;
-               state_aux : out STD_LOGIC_VECTOR(2 downto 0)
+               state_aux : out STD_LOGIC_VECTOR(2 downto 0);
+               
+               sample_request_aux : out std_logic
                );
     end component;
     
@@ -84,7 +86,7 @@ component dsed_audio is
     
     signal state_aux : std_logic_vector(2 downto 0) := "000";
     
-    signal a, b, c : std_logic := '0';
+    signal a, b, c, sample_request_aux : std_logic := '0';
     
     -- Timing signals
     constant PERIOD : time := 10ps;
@@ -117,8 +119,9 @@ begin
         
         rec_enable => rec_enable,
         reco_ready => reco_ready,
-        state_aux => state_aux
+        state_aux => state_aux,
         
+        sample_request_aux => sample_request_aux
         );
         
     -- CLK process
@@ -141,20 +144,20 @@ begin
     micro_data <= a xor b xor c;
     
     BTNL <= '1',
-            '0' after 10us;
+            '0' after 2us;
             
     -- Sound on and try all functionalities
     BTNR <= '0',
-            '1' after 10us;
+            '1' after 2us;
             
     SW0 <= '0', -- Play forward
-           '1' after 30us, -- Play reverse
-           '0' after 50us, -- Filter LP
-           '1' after 70us; -- Filter HP
+           --'1' after 6us, -- Play reverse
+           '0' after 4us, -- Filter LP
+           '1' after 6us; -- Filter HP
            
     SW1 <= '0', -- Play forward
-           '0' after 30us, -- Play reverse
-           '1' after 50us, -- Filter LP
-           '1' after 70us; -- Filter HP
+           --'0' after 6us, -- Play reverse
+           '1' after 4us, -- Filter LP
+           '1' after 6us; -- Filter HP
 
 end Behavioral;
