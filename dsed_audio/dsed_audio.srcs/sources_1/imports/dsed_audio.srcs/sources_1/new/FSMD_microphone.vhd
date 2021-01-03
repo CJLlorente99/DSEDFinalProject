@@ -8,12 +8,14 @@
 -- Project Name: Sistema de grabación, tratamiento y reproducción de audio
 -- Target Devices: 
 -- Tool Versions: 
--- Description: Microphone interface
+-- Description: This component receives data from the microphone and translates it to STD_LOGIC_VECTOR. 
 -- 
 -- Dependencies: 
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
+-- Revision 1.00 - File finished
+-- Revision 1.01 - File commented
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -22,26 +24,15 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.package_dsed.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity FSMD_microphone is
-    Port ( clk_12megas : in STD_LOGIC;
-           reset : in STD_LOGIC;
-           enable_4_cycles : in STD_LOGIC;
-           micro_data : in STD_LOGIC;
-           sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
-           sample_out_ready : out STD_LOGIC
-           -- Debugging outputs
---           count : out integer;
---           state_num : out integer
+    Port ( clk_12megas : in STD_LOGIC; -- System clk
+           reset : in STD_LOGIC; -- Asynchronous reset
+           enable_4_cycles : in STD_LOGIC; -- Input signal in order to make this component work at 3MHz (comes from an AND gate of enable_4_cycles and record_enable)
+           micro_data : in STD_LOGIC; -- Incoming data from microphone
+           sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0); -- Sampled microphone data
+           sample_out_ready : out STD_LOGIC -- Indicates sample_out is ready to be taken
            );
 end FSMD_microphone;
 
@@ -59,6 +50,7 @@ architecture Behavioral of FSMD_microphone is
     signal state, next_state : state_type;
 
 begin
+
     -- Register
     -- Upload new register values at a 3 MHz rate
     process (clk_12megas, reset)
@@ -75,7 +67,7 @@ begin
             state <= idle;
             
         elsif rising_edge(clk_12megas) then
-            if enable_4_cycles = '1' then
+            if enable_4_cycles = '1' then -- IMPORTANT this if clause also contains record_enable condition
                 state <= next_state;
                 count <= next_count;
                 data1 <= next_data1;
@@ -182,16 +174,6 @@ begin
     
     -- Output logic
     sample_out <= std_logic_vector(sample_out_unsig);
-    sample_out_ready <= sout_ready and enable_4_cycles;
-
-    -- Debugging logic
---    sample_out <= std_logic_vector(data2_reg);
---    count <= count_reg;
---    state_num <= 0 when state = idle else
---                 1 when state = track else
---                 2 when state = show_data1 else
---                 3 when state = show_data2 else
---                 4;
-                 
+    sample_out_ready <= sout_ready and enable_4_cycles;                 
 
 end Behavioral;

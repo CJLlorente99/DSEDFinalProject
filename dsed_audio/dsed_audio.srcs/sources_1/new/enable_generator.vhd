@@ -1,19 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Grupo 9
+-- Engineer: CJLL & ITI
 -- 
 -- Create Date: 09.11.2020 16:50:05
--- Design Name: 
+-- Design Name: -
 -- Module Name: enable_generator - Behavioral
--- Project Name: 
+-- Project Name: Sistema de grabación, tratamiento y reproducción de audio
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
+-- Description: This component creates various pulses at different rates, needed in several components belonging to audio_interface
 -- 
 -- Dependencies: 
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
+-- Revision 1.00 - File finished
+-- Revision 1.01 - File commented
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -21,30 +23,22 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity enable_generator is
-    Port ( clk_12megas : in STD_LOGIC;
-           reset : in STD_LOGIC;
+    Port ( clk_12megas : in STD_LOGIC; -- System clock
+           reset : in STD_LOGIC; -- Asynchronous reset
            clk_3megas : out STD_LOGIC;
            en_2_cycles : out STD_LOGIC;
            en_4_cycles : out STD_LOGIC);
---           counter_out : out unsigned(2 downto 0));
 end enable_generator;
 
 architecture Behavioral of enable_generator is
-    -- Signals
+    -- Signal declaration
     signal count, next_count : unsigned(2 downto 0);
     
 begin
+
     -- Register
     process (clk_12megas, reset)
     begin
@@ -68,7 +62,5 @@ begin
                    
     en_4_cycles <= '1' when count = 2 else
                    '0';
-    
---    counter_out <= count;
     
 end Behavioral;
