@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Grupo 9
+-- Engineer: CJLL & ITI
 -- 
 -- Create Date: 27.11.2020 12:49:10
 -- Design Name: 
 -- Module Name: half_mul - Behavioral
--- Project Name: 
+-- Project Name: Sistema de grabación, tratamiento y reproducción de audio
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
@@ -22,15 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.package_dsed.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 
 entity half_mul is
@@ -45,19 +37,20 @@ end half_mul;
 
 architecture Behavioral of half_mul is
     
-    signal mult, next_mult : signed (((sample_size*2)-2) downto 0) := (others => '0');
-    signal aux : signed (((sample_size*2)-1) downto 0) := (others => '0');
+    -- Signals
+        signal mult, next_mult : signed (((sample_size*2)-2) downto 0) := (others => '0');
+        signal aux : signed (((sample_size*2)-1) downto 0) := (others => '0');
 
 begin
 
-    -- Registers
-    process (clk, reset) begin
-        if reset = '1' then
-            mult <= (others => '0');
-        elsif rising_edge(clk) then
-            mult <= next_mult;
-        end if;
-    end process;
+    -- Register
+        process (clk, reset) begin
+            if reset = '1' then
+                mult <= (others => '0');
+            elsif rising_edge(clk) then
+                mult <= next_mult;
+            end if;
+        end process;
     
     -- Next state logic
         aux <= signed(a) * signed(b);
