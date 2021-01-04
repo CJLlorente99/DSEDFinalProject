@@ -14,49 +14,51 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21900 
+INFO: Helper process launched with PID 9780 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 325.762 ; gain = 75.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 309.121 ; gain = 74.062
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'dsed_audio' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:55]
-INFO: [Synth 8-3491] module 'clk_wiz_12mhz' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/realtime/clk_wiz_12mhz_stub.vhdl:5' bound to instance 'CLK_WIZ' of component 'clk_wiz_12mhz' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_12mhz' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/realtime/clk_wiz_12mhz_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'audio_interface' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'AUDIO_INTER' of component 'audio_interface' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'audio_interface' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:60]
-INFO: [Synth 8-3491] module 'pwm' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:35' bound to instance 'U0' of component 'pwm' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:125]
-INFO: [Synth 8-638] synthesizing module 'pwm' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'pwm' (1#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:44]
-INFO: [Synth 8-3491] module 'FSMD_microphone' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:35' bound to instance 'U1' of component 'FSMD_microphone' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:134]
-INFO: [Synth 8-638] synthesizing module 'FSMD_microphone' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:48]
-INFO: [Synth 8-226] default block is never used [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:101]
-INFO: [Synth 8-256] done synthesizing module 'FSMD_microphone' (2#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:48]
-INFO: [Synth 8-3491] module 'enable_generator' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:34' bound to instance 'U3' of component 'enable_generator' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'enable_generator' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'enable_generator' (3#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:43]
-INFO: [Synth 8-3491] module 'average_power_display' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:35' bound to instance 'U4' of component 'average_power_display' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:151]
-INFO: [Synth 8-638] synthesizing module 'average_power_display' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'average_power_display' (4#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'audio_interface' (5#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:60]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'RAM' of component 'blk_mem_gen_0' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/realtime/blk_mem_gen_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'fir_filter' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:35' bound to instance 'FILTER' of component 'fir_filter' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:179]
-INFO: [Synth 8-638] synthesizing module 'fir_filter' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:53]
-INFO: [Synth 8-3491] module 'fir_data_path' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:35' bound to instance 'U0' of component 'fir_data_path' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:92]
-INFO: [Synth 8-638] synthesizing module 'fir_data_path' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:53]
-INFO: [Synth 8-3491] module 'half_mul' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:36' bound to instance 'U0' of component 'half_mul' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'half_mul' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'half_mul' (6#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:46]
-WARNING: [Synth 8-6014] Unused sequential element c3_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:98]
-WARNING: [Synth 8-6014] Unused sequential element c4_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:99]
-INFO: [Synth 8-256] done synthesizing module 'fir_data_path' (7#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:53]
-INFO: [Synth 8-3491] module 'controlador_fir' declared at 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:34' bound to instance 'U1' of component 'controlador_fir' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:110]
-INFO: [Synth 8-638] synthesizing module 'controlador_fir' [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'controlador_fir' (8#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'fir_filter' (9#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:53]
-INFO: [Synth 8-226] default block is never used [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:223]
-INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (10#1) [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'dsed_audio' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:68]
+INFO: [Synth 8-3491] module 'clk_wiz_12mhz' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/realtime/clk_wiz_12mhz_stub.vhdl:5' bound to instance 'CLK_WIZ' of component 'clk_wiz_12mhz' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_12mhz' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/realtime/clk_wiz_12mhz_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:28' bound to instance 'AUDIO_INTER' of component 'audio_interface' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'audio_interface' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:53]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:29' bound to instance 'PWM_CONVERTER' of component 'pwm' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (1#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:38]
+INFO: [Synth 8-3491] module 'FSMD_microphone' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:29' bound to instance 'MICRO_SAMPLER' of component 'FSMD_microphone' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'FSMD_microphone' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'FSMD_microphone' (2#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd:39]
+INFO: [Synth 8-3491] module 'enable_generator' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:28' bound to instance 'EN_GENERATOR' of component 'enable_generator' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'enable_generator' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'enable_generator' (3#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd:36]
+INFO: [Synth 8-3491] module 'average_power_display' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:30' bound to instance 'POWER_LEDS' of component 'average_power_display' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'average_power_display' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'average_power_display' (4#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'audio_interface' (5#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd:53]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'RAM' of component 'blk_mem_gen_0' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'fir_filter' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:27' bound to instance 'FILTER' of component 'fir_filter' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'fir_filter' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:37]
+INFO: [Synth 8-3491] module 'fir_data_path' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:27' bound to instance 'U0' of component 'fir_data_path' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'fir_data_path' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:38]
+INFO: [Synth 8-3491] module 'half_mul' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:28' bound to instance 'U0' of component 'half_mul' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'half_mul' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'half_mul' (6#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element c3_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element c4_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'fir_data_path' (7#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd:38]
+INFO: [Synth 8-3491] module 'controlador_fir' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:27' bound to instance 'U1' of component 'controlador_fir' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'controlador_fir' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'controlador_fir' (8#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter' (9#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd:37]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:258]
+WARNING: [Synth 8-614] signal 'final_address' is read in the process but is not in the sensitivity list [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:244]
+WARNING: [Synth 8-614] signal 'act_address' is read in the process but is not in the sensitivity list [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:244]
+INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (10#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:68]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 366.086 ; gain = 116.246
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 349.449 ; gain = 114.391
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -66,46 +68,46 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 366.086 ; gain = 116.246
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 349.449 ; gain = 114.391
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp5/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
-Finished Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp5/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
-Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
-Finished Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
-Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dsed_audio_propImpl.xdc].
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp5/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp5/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dsed_audio_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/dsed_audio_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 681.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 666.441 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp5/clk_wiz_12mhz_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-15840-LAPTOP-GL32TFLH/dcp5/clk_wiz_12mhz_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp5/clk_wiz_12mhz_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/.Xil/Vivado-4624-LAPTOP-C5U9VH29/dcp5/clk_wiz_12mhz_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for CLK_WIZ. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for RAM. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "next_sample" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "next_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -114,11 +116,11 @@ INFO: [Synth 8-5545] ROM "next_sample_out_unsig" won't be mapped to RAM because 
 INFO: [Synth 8-5544] ROM "en_4_cycles" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "LED_output" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controlador_fir'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:61]
 INFO: [Synth 8-5544] ROM "next_sample_out_ready" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dsed_audio'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:229]
 INFO: [Synth 8-5544] ROM "next_final_address" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "wea" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "play_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -132,8 +134,8 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:65]
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:61]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -146,9 +148,9 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vi
                       s5 |                              110 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'controlador_fir'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:65]
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:194]
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:229]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -162,9 +164,9 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vi
                reset_mem |                              001 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dsed_audio'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd:229]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -196,7 +198,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 10    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 9     
@@ -213,10 +215,10 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
-	  45 Input      3 Bit        Muxes := 1     
+	  52 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 29    
+	   2 Input      1 Bit        Muxes := 20    
 	   5 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 2     
@@ -234,13 +236,13 @@ Detailed RTL Component Info :
 	   2 Input     19 Bit       Adders := 4     
 +---Registers : 
 	               19 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     19 Bit        Muxes := 12    
 	   8 Input     19 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 2     
-	  45 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 22    
+	  52 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
 	   8 Input      1 Bit        Muxes := 8     
 Module pwm 
 Detailed RTL Component Info : 
@@ -341,15 +343,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "next_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "AUDIO_INTER/U0/next_sample" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "AUDIO_INTER/U4/LED_output" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/U0/count_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:56]
-WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/U4/count_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:54]
-WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/U4/total_power_reg was removed.  [D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:55]
+INFO: [Synth 8-5546] ROM "AUDIO_INTER/PWM_CONVERTER/next_sample" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "AUDIO_INTER/POWER_LEDS/LED_output" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/PWM_CONVERTER/count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/POWER_LEDS/count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element AUDIO_INTER/POWER_LEDS/total_power_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd:50]
 WARNING: [Synth 8-3917] design dsed_audio has port micro_LR driven by constant 1
 WARNING: [Synth 8-3917] design dsed_audio has port jack_sd driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,13 +365,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'CLK_WIZ/clk_12Mhz' to pin 'CLK_WIZ/bbstub_clk_12Mhz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 681.074 ; gain = 431.234
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 666.441 ; gain = 431.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 711.395 ; gain = 461.555
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 696.766 ; gain = 461.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -381,7 +383,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -405,7 +407,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -418,7 +420,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -430,25 +432,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -470,51 +472,50 @@ Report Cell Usage:
 |2     |clk_wiz_12mhz_bbox |     1|
 |3     |CARRY4             |    88|
 |4     |LUT1               |   106|
-|5     |LUT2               |    55|
-|6     |LUT3               |   104|
-|7     |LUT4               |    62|
-|8     |LUT5               |   161|
-|9     |LUT6               |   361|
-|10    |MUXF7              |     1|
+|5     |LUT2               |    58|
+|6     |LUT3               |    89|
+|7     |LUT4               |    74|
+|8     |LUT5               |   125|
+|9     |LUT6               |   384|
+|10    |MUXF7              |     2|
 |11    |FDCE               |   233|
-|12    |FDRE               |     2|
+|12    |FDRE               |     4|
 |13    |IBUF               |     7|
 |14    |OBUF               |    12|
 +------+-------------------+------+
 
 Report Instance Areas: 
-+------+--------------+----------------------+------+
-|      |Instance      |Module                |Cells |
-+------+--------------+----------------------+------+
-|1     |top           |                      |  1201|
-|2     |  AUDIO_INTER |audio_interface       |   657|
-|3     |    U0        |pwm                   |   170|
-|4     |    U1        |FSMD_microphone       |   405|
-|5     |    U3        |enable_generator      |    11|
-|6     |    U4        |average_power_display |    71|
-|7     |  FILTER      |fir_filter            |   282|
-|8     |    U0        |fir_data_path         |   169|
-|9     |      U0      |half_mul              |    58|
-|10    |    U1        |controlador_fir       |   112|
-+------+--------------+----------------------+------+
++------+------------------+----------------------+------+
+|      |Instance          |Module                |Cells |
++------+------------------+----------------------+------+
+|1     |top               |                      |  1191|
+|2     |  AUDIO_INTER     |audio_interface       |   662|
+|3     |    EN_GENERATOR  |enable_generator      |     9|
+|4     |    MICRO_SAMPLER |FSMD_microphone       |   411|
+|5     |    POWER_LEDS    |average_power_display |    70|
+|6     |    PWM_CONVERTER |pwm                   |   172|
+|7     |  FILTER          |fir_filter            |   276|
+|8     |    U0            |fir_data_path         |   189|
+|9     |      U0          |half_mul              |    77|
+|10    |    U1            |controlador_fir       |    86|
++------+------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 712.516 ; gain = 462.676
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 712.516 ; gain = 147.688
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 712.516 ; gain = 462.676
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 697.887 ; gain = 145.836
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 697.887 ; gain = 462.828
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-77 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+76 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 712.516 ; gain = 471.570
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/dsed_audio.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 712.516 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 29 18:25:28 2020...
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 697.887 ; gain = 471.617
+INFO: [Common 17-1381] The checkpoint 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/dsed_audio.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 697.887 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  4 19:32:07 2021...

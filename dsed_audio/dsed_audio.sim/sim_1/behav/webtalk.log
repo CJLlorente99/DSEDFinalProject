@@ -2,12 +2,13 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Jan  4 18:24:57 2021
-# Process ID: 20212
-# Current directory: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/dsed_audio_1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
-# Journal file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
+# Start of session at: Mon Jan  4 20:08:15 2021
+# Process ID: 14252
+# Current directory: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/dsed_audio_1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.sim/sim_1/behav/xsim.dir/dsed_audio_1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Jan  4 18:24:57 2021...
+source C:/Users/carlo/Documents/Universidad/Cuarto -notrace
+couldn't read file "C:/Users/carlo/Documents/Universidad/Cuarto": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Mon Jan  4 20:08:15 2021...

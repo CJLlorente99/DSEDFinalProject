@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jan  4 19:32:15 2021
+# Process ID: 16680
+# Current directory: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/impl_2
+# Command line: vivado.exe -log dsed_audio.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dsed_audio.tcl -notrace
+# Log file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/impl_2/dsed_audio.vdi
+# Journal file: C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
+source dsed_audio.tcl -notrace

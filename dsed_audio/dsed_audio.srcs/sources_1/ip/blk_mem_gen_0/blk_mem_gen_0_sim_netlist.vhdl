@@ -1,10 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Fri Dec 11 12:17:40 2020
--- Host        : LAPTOP-GL32TFLH running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl
+-- Date        : Mon Jan  4 18:40:21 2021
+-- Host        : LAPTOP-C5U9VH29 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo
+--               de sistemas electrnicos digitales/Proyecto
+--               final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl}
 -- Design      : blk_mem_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

@@ -1,0 +1,75 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Jan  4 19:33:23 2021
+| Host         : LAPTOP-C5U9VH29 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file dsed_audio_control_sets_placed.rpt
+| Design       : dsed_audio
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              17 |           14 |
+| No           | No                    | Yes                    |              43 |           14 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               1 |            1 |
+| Yes          | No                    | Yes                    |             190 |           88 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-------------------------------------------------+------------------+------------------+----------------+
+|       Clock Signal      |                  Enable Signal                  | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------------+-------------------------------------------------+------------------+------------------+----------------+
+|  CLK_WIZ/inst/clk_12Mhz | filter_select0                                  |                  |                1 |              1 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/MICRO_SAMPLER/sample_out_unsig      | reset_IBUF       |                4 |              8 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/PWM_CONVERTER/next_sample           | reset_IBUF       |                2 |              8 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/PWM_CONVERTER/LED_output_reg[7][0]  | reset_IBUF       |                4 |              8 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/EN_GENERATOR/E[0]                   | reset_IBUF       |                4 |              9 |
+|  CLK_WIZ/inst/clk_12Mhz |                                                 |                  |               14 |             17 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/PWM_CONVERTER/act_address_reg[0][0] | reset_IBUF       |               19 |             19 |
+|  CLK_WIZ/inst/clk_12Mhz | next_final_address                              | reset_IBUF       |                8 |             19 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/PWM_CONVERTER/sample_request        | reset_IBUF       |                8 |             28 |
+|  CLK_WIZ/inst/clk_12Mhz | FILTER/U0/x4_0                                  | reset_IBUF       |               13 |             40 |
+|  CLK_WIZ/inst/clk_12Mhz |                                                 | reset_IBUF       |               14 |             43 |
+|  CLK_WIZ/inst/clk_12Mhz | AUDIO_INTER/EN_GENERATOR/enable_4_cycles0_out   | reset_IBUF       |               26 |             51 |
++-------------------------+-------------------------------------------------+------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 8      |                     3 |
+| 9      |                     1 |
+| 16+    |                     7 |
++--------+-----------------------+
+
+

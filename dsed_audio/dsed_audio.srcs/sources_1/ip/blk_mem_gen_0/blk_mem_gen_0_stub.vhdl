@@ -1,10 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Fri Dec 11 12:17:39 2020
--- Host        : LAPTOP-GL32TFLH running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
+-- Date        : Mon Jan  4 18:40:20 2021
+-- Host        : LAPTOP-C5U9VH29 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer
+--               Semestre/Diseo de sistemas electrnicos digitales/Proyecto
+--               final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl}
 -- Design      : blk_mem_gen_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
