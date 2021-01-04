@@ -140,7 +140,7 @@ architecture Behavioral of dsed_audio is
         
         -- Filter
         signal sample_in_filter : STD_LOGIC_VECTOR(7 downto 0);
-        signal filter_in_enable, next_filter_in_enable, filter_select : STD_LOGIC := '0';
+        signal filter_in_enable, next_filter_in_enable, middle_filter_in_enable, filter_select : STD_LOGIC := '0';
         signal data_filter : STD_LOGIC_VECTOR(7 downto 0);
         signal data_filter_ready : STD_LOGIC;
         
@@ -229,14 +229,13 @@ begin
             state <= idle;
             final_address <= (others => '0');
             act_address <= (others => '0');
-            -- resetear los diferentes registros
         elsif rising_edge(clk_12Mhz) then
             state <= next_state;
             final_address <= next_final_address;
             act_address <= next_act_address;
             filter_select <= next_filter_select;
-            filter_in_enable <= next_filter_in_enable;
-            -- update registers
+            filter_in_enable <= middle_filter_in_enable;
+            middle_filter_in_enable <= next_filter_in_enable;
         end if;     
     end process;
     
