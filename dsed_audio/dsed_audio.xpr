@@ -159,15 +159,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/vhd files/seven_segment_manager.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/seven_segment_manager.vhd"/>
-          <Attr Name="ImportTime" Val="1609884997"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/volume_control.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -182,6 +173,15 @@
           <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/prueba_in_out_audio.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/seven_segment_manager.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/seven_segment_manager.vhd"/>
+          <Attr Name="ImportTime" Val="1609886262"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
