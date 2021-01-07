@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1609785080">
+  <File Type="PWROPT-DRC" Name="dsed_audio_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="dsed_audio_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="dsed_audio_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="dsed_audio_power_routed.rpx"/>
   <File Type="PA-TCL" Name="dsed_audio.tcl"/>
-  <File Type="INIT-TIMING" Name="dsed_audio_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dsed_audio_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="dsed_audio_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="dsed_audio.hwdef"/>
   <File Type="RDI-RDI" Name="dsed_audio.vdi"/>
   <File Type="OPT-DCP" Name="dsed_audio_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="dsed_audio.hwdef"/>
   <File Type="OPT-DRC" Name="dsed_audio_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="dsed_audio_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="dsed_audio_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="dsed_audio_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="dsed_audio_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="dsed_audio_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="dsed_audio_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="dsed_audio.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dsed_audio_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="dsed_audio_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="dsed_audio.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dsed_audio_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="dsed_audio_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="dsed_audio.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dsed_audio_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dsed_audio_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="dsed_audio.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dsed_audio_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="dsed_audio_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="dsed_audio_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="dsed_audio_route_status.rpt"/>

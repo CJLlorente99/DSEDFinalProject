@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jan  4 18:25:04 2021
+# Process ID: 1200
+# Current directory: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8564 D:\Vivado\Laboratorios\final_project\DSEDFinalProject\dsed_audio\dsed_audio.xpr
+# Log file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/vivado.log
+# Journal file: D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source dsed_audio_1_tb.tcl
+close_sim
