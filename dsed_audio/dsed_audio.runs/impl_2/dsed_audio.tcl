@@ -57,11 +57,11 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/dsed_audio.dcp}}
-  read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
-  set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
   read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
   set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
-  read_xdc {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc}}
+  read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
+  set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
+  read_xdc {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc}}
   link_design -top dsed_audio -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

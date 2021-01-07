@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Mon Jan  4 19:34:15 2021
+| Date             : Thu Jan  7 22:43:32 2021
 | Host             : LAPTOP-C5U9VH29 running 64-bit major release  (build 9200)
 | Command          : report_power -file dsed_audio_power_routed.rpt -pb dsed_audio_power_summary_routed.pb -rpx dsed_audio_power_routed.rpx
 | Design           : dsed_audio
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.229 |
+| Total On-Chip Power (W)  | 0.230 |
 | Dynamic (W)              | 0.126 |
 | Device Static (W)        | 0.103 |
 | Effective TJA (C/W)      | 4.6   |
@@ -50,18 +50,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1500 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      923 |     63400 |            1.46 |
-|   CARRY4       |    <0.001 |       88 |     15850 |            0.56 |
-|   Register     |    <0.001 |      251 |    126800 |            0.20 |
-|   F7/F8 Muxes  |    <0.001 |       10 |     63400 |            0.02 |
+| Slice Logic    |    <0.001 |     1493 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      880 |     63400 |            1.39 |
+|   CARRY4       |    <0.001 |       83 |     15850 |            0.52 |
+|   Register     |    <0.001 |      250 |    126800 |            0.20 |
+|   F7/F8 Muxes  |    <0.001 |       28 |     63400 |            0.04 |
 |   Others       |     0.000 |      163 |       --- |             --- |
-| Signals        |    <0.001 |     1201 |       --- |             --- |
+| Signals        |    <0.001 |     1160 |       --- |             --- |
 | Block RAM      |     0.003 |      128 |       135 |           94.81 |
 | MMCM           |     0.121 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       20 |       210 |            9.52 |
 | Static Power   |     0.103 |          |           |                 |
-| Total          |     0.229 |          |           |                 |
+| Total          |     0.230 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 

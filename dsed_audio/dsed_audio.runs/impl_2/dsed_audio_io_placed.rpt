@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Mon Jan  4 19:33:23 2021
+| Date                      : Thu Jan  7 22:42:41 2021
 | Host                      : LAPTOP-C5U9VH29 running 64-bit major release  (build 9200)
 | Command                   : report_io -file dsed_audio_io_placed.rpt
 | Design                    : dsed_audio

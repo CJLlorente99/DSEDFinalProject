@@ -17,27 +17,27 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo {c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/package_dsed.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/FSMD_microphone.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/audio_interface.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/average_power_display.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/controlador_fir.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/enable_generator.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_data_path.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/fir_filter.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/new/half_mul.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/Downloads/pwm.vhd}
-  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/dsed_audio.srcs/sources_1/new/dsed_audio.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/package_dsed.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/FSMD_microphone.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/enable_generator.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/half_mul.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd}
+  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd}
 }
+read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
+set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
+
 read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz_ooc.xdc}}]
 set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
-
-read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
-set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,9 +47,11 @@ set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cu
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/Laboratorio/Nexys4DDR_Master.xdc}}]
+read_xdc {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc}}]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top dsed_audio -part xc7a100tcsg324-1
 

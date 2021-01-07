@@ -249,7 +249,7 @@ begin
                             next_act_address <= (others => '0');
                             next_state <= play_forward;
                         else                
-                            next_act_address <= final_address - 1;
+                            next_act_address <= final_address;
                             next_state <= play_reverse;
                         end if;
                     elsif SW1 = '1' then    
@@ -294,7 +294,7 @@ begin
                             next_act_address <= (others => '0');
                             next_state <= play_forward;
                         else
-                            next_act_address <= final_address - 1;
+                            next_act_address <= final_address;
                             next_state <= play_reverse;
                         end if;
                     elsif SW1 = '1' then
@@ -329,7 +329,7 @@ begin
                             next_act_address <= (others => '0');
                             next_state <= play_forward;
                         else
-                            next_act_address <= final_address - 1;
+                            next_act_address <= final_address;
                             next_state <= play_reverse;
                         end if;
                     elsif SW1 = '1' then
@@ -362,7 +362,7 @@ begin
                             --------------------------------
                             next_state <= play_forward;
                             if sample_request = '1' then
-                                if act_address = final_address - 1 then
+                                if act_address = final_address then
                                     next_act_address <= (others => '0');
                                 else
                                     next_act_address <= act_address + 1;
@@ -370,7 +370,7 @@ begin
                             end if;
                             --------------------------------
                         elsif SW0 = '1' and sample_request = '1' then
-                            next_act_address <= final_address - 1;
+                            next_act_address <= final_address;
                             next_state <= play_reverse;
                         end if;
                     elsif SW1 = '1' then
@@ -404,7 +404,7 @@ begin
                             next_state <= play_reverse;
                             if sample_request = '1' then
                                 if act_address = 0 then
-                                    next_act_address <= final_address - 1;
+                                    next_act_address <= final_address;
                                 else
                                     next_act_address <= act_address - 1;
                                 end if;                             
@@ -444,7 +444,7 @@ begin
                             next_act_address <= (others => '0');
                             next_state <= play_forward;
                         else
-                            next_act_address <= final_address - 1;
+                            next_act_address <= final_address;
                             next_state <= play_reverse;
                         end if;
                     elsif SW1 = '1' then                        
@@ -486,7 +486,7 @@ begin
                             next_state <= play_reverse;
                             if sample_request = '1' then
                                 if act_address = 0 then
-                                    next_act_address <= final_address - 1;
+                                    next_act_address <= final_address;
                                 else
                                     next_act_address <= act_address - 1;
                                 end if;                             
@@ -499,7 +499,7 @@ begin
                         if sample_request = '1' then
                             next_state <= filter1;
                             next_filter_in_enable <= '1';
-                            if act_address = final_address - 1 then
+                            if act_address = final_address then
                                 next_act_address <= (others => '0');
                                 next_filter_in_enable <= '1';
                             else
@@ -524,7 +524,7 @@ begin
         end process;
     
     -- Conversion from binary to CA2
-    sample_in_filter <= not data_ram(sample_size-1) & data_ram(sample_size-2 downto 0);
+        sample_in_filter <= not data_ram(sample_size-1) & data_ram(sample_size-2 downto 0);
     
     -- Output Logic
         signal_speaker <= data_ram when (state = play_forward or state = play_reverse) else
