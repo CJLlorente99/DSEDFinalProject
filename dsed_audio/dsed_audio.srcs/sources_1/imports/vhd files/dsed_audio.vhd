@@ -50,7 +50,13 @@ entity dsed_audio is
          -- To/From the mini_jack
          jack_sd : out STD_LOGIC;
          jack_pwm : out STD_LOGIC;
-         LED : out STD_LOGIC_VECTOR(7 downto 0)
+         LED : out STD_LOGIC_VECTOR(7 downto 0);
+         -- Volume control
+         volume_up : in STD_LOGIC;
+         volume_down : in STD_LOGIC;
+         -- Seven segments
+         an : out STD_LOGIC_VECTOR (7 downto 0);
+         seven_seg : out STD_LOGIC_VECTOR (6 downto 0)
     );
 end dsed_audio;
 
@@ -117,6 +123,30 @@ architecture Behavioral of dsed_audio is
                 sample_out_ready : out STD_LOGIC
             );
         end component;
+        
+        -- Volume control declaration
+        
+        component volume_control is
+            Port ( 
+                clk : in STD_LOGIC;
+                reset : in STD_LOGIC;
+                level_up : in STD_LOGIC;
+                level_down : in STD_LOGIC;
+                sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+                sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0)
+--                to_seven_seg : out STD_LOGIC_VECTOR (6 downto 0) -- Sent to the 7 segment manager
+            );
+        end component;
+        
+        -- Seven segment manager
+        
+        component seven_segment_manager is
+            Port ( clk : in STD_LOGIC;
+                   reset : in STD_LOGIC;
+                   volume_info : in STD_LOGIC_VECTOR (6 downto 0);
+                   an : out STD_LOGIC_VECTOR (7 downto 0);
+                   seven_seg : out STD_LOGIC_VECTOR (6 downto 0));
+        end component;
     
     --FSM state type declaration
     type state_type is (idle, filter1, filter2, record_sampling, record_save, reset_mem, play_forward, play_reverse);
@@ -138,6 +168,10 @@ architecture Behavioral of dsed_audio is
         signal filter_in_enable, next_filter_in_enable, middle_filter_in_enable, filter_select : STD_LOGIC := '0';
         signal data_filter : STD_LOGIC_VECTOR(7 downto 0);
         signal data_filter_ready : STD_LOGIC;
+        
+        -- Volume
+        signal from_volume_to_pwm : STD_LOGIC_VECTOR (sample_size-1 downto 0);
+        signal from_volume_to_seven : STD_LOGIC_VECTOR (6 downto 0);
         
         -- Extra signals
         signal signal_speaker : STD_LOGIC_VECTOR (sample_size -1 downto 0);
@@ -169,7 +203,7 @@ begin
                    micro_data => micro_data, 
                    micro_LR => micro_LR, 
                    play_enable => play_en,
-                   sample_in => signal_speaker,
+                   sample_in => from_volume_to_pwm,
                    sample_request => sample_request,
                    jack_sd => jack_sd,
                    jack_pwm => jack_pwm,
@@ -197,6 +231,27 @@ begin
                    sample_out_ready => data_filter_ready
                );
                
+    -- volume instantation
+    VOLUME : volume_control
+        port map ( clk => clk_12Mhz,
+                   reset => reset,
+                   level_up => volume_up,
+                   level_down => volume_down,
+                   sample_in => signal_speaker,
+                   sample_out => from_volume_to_pwm
+--                   to_seven_seg => from_volume_to_seven
+                );
+                
+    -- seven segment manager instantation
+            
+--    SEVEN_SEG_MANAGER : seven_segment_manager
+--        port map ( clk => clk_12Mhz,
+--                   reset => reset,
+--                   volume_info => from_volume_to_seven,
+--                   an => an,
+--                   seven_seg => seven_seg
+--               );
+               
    ena <= '1';
                         
     -- FSMD logic
@@ -218,7 +273,7 @@ begin
             end process;
     
     -- FSMD states logic
-        process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, data_ram, filter_select, data_filter, data_filter_ready, next_final_address, next_act_address)
+        process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, data_ram, filter_select, data_filter, data_filter_ready, final_address, act_address)
         begin
         -- Default treatment
             play_en <= '0';
