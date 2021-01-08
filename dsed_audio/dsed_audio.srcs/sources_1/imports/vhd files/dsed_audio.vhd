@@ -218,7 +218,7 @@ begin
             end process;
     
     -- FSMD states logic
-        process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, data_ram, filter_select, data_filter, data_filter_ready)
+        process(state, BTNC, BTNL, BTNR, SW0, SW1, rec_ready, sample_request, data_ram, filter_select, data_filter, data_filter_ready, next_final_address, next_act_address)
         begin
         -- Default treatment
             play_en <= '0';
@@ -363,7 +363,8 @@ begin
                             next_state <= play_forward;
                             if sample_request = '1' then
                                 if act_address = final_address then
-                                    next_act_address <= (others => '0');
+                                    next_act_address <= act_address;
+                                    play_en <= '0';
                                 else
                                     next_act_address <= act_address + 1;
                                 end if;                             
@@ -404,7 +405,8 @@ begin
                             next_state <= play_reverse;
                             if sample_request = '1' then
                                 if act_address = 0 then
-                                    next_act_address <= final_address;
+                                    next_act_address <= act_address;
+                                    play_en <= '0';
                                 else
                                     next_act_address <= act_address - 1;
                                 end if;                             
@@ -500,8 +502,9 @@ begin
                             next_state <= filter1;
                             next_filter_in_enable <= '1';
                             if act_address = final_address then
-                                next_act_address <= (others => '0');
+                                next_act_address <= act_address;
                                 next_filter_in_enable <= '1';
+                                play_en <= '0';
                             else
                                 next_act_address <= act_address + 1;
                                 next_filter_in_enable <= '1';
