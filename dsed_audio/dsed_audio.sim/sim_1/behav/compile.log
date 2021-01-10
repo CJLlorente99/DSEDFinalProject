@@ -1,5 +1,5 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/package_dsed.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity pwm
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity pwm_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/delay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity delay
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/new/delay_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity delay_tb

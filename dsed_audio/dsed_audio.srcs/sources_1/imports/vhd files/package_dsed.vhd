@@ -40,6 +40,13 @@ package package_dsed is
     constant seven_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "1111000";
     constant eight_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant nine_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0010000";
+    constant space_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "1111111";
+    constant v_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "1100011";
+    constant o_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0100011";
+    constant l_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "1001111";
+    constant equal_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0110111";
+    constant e_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0000110";
+    constant c_7_seg : STD_LOGIC_VECTOR (6 downto 0) := "0100111";
     
     -- Filter coefs:
         -- High pass

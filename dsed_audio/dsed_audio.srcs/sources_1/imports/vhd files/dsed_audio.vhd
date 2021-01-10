@@ -54,7 +54,7 @@ entity dsed_audio is
          -- Volume control
          volume_up : in STD_LOGIC;
          volume_down : in STD_LOGIC;
-         -- Seven segments
+         -- Display and seven segments
          an : out STD_LOGIC_VECTOR (7 downto 0);
          seven_seg : out STD_LOGIC_VECTOR (6 downto 0)
     );
@@ -133,8 +133,8 @@ architecture Behavioral of dsed_audio is
                 level_up : in STD_LOGIC;
                 level_down : in STD_LOGIC;
                 sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
-                sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0)
---                to_seven_seg : out STD_LOGIC_VECTOR (6 downto 0) -- Sent to the 7 segment manager
+                sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
+                to_seven_seg : out STD_LOGIC_VECTOR (6 downto 0) -- Sent to the 7 segment manager
             );
         end component;
         
@@ -144,8 +144,21 @@ architecture Behavioral of dsed_audio is
             Port ( clk : in STD_LOGIC;
                    reset : in STD_LOGIC;
                    volume_info : in STD_LOGIC_VECTOR (6 downto 0);
+                   level : in STD_LOGIC_VECTOR (4 downto 0);
                    an : out STD_LOGIC_VECTOR (7 downto 0);
                    seven_seg : out STD_LOGIC_VECTOR (6 downto 0));
+        end component;
+        
+        component delay is
+            Port ( clk : in STD_LOGIC;
+                   reset : in STD_LOGIC;
+                   increase : in STD_LOGIC;
+                   decrease : in STD_LOGIC;
+                   original_sig : in STD_LOGIC_VECTOR(sample_size - 1 downto 0);
+                   original_sig_ready : in STD_LOGIC;
+                   delayed_sig : out STD_LOGIC_VECTOR(sample_size - 1 downto 0);
+                   actual_level : out STD_LOGIC_VECTOR(4 downto 0)
+            );
         end component;
     
     --FSM state type declaration
@@ -173,6 +186,11 @@ architecture Behavioral of dsed_audio is
         signal from_volume_to_pwm : STD_LOGIC_VECTOR (sample_size-1 downto 0);
         signal from_volume_to_seven : STD_LOGIC_VECTOR (6 downto 0);
         
+        -- Delay
+        signal enable, increase, decrease, original_sig_ready : STD_LOGIC := '0';
+        signal original_sig, delayed_sig : STD_LOGIC_VECTOR(sample_size - 1 downto 0);
+        signal level : STD_LOGIC_VECTOR(4 downto 0);
+        
         -- Extra signals
         signal signal_speaker : STD_LOGIC_VECTOR (sample_size -1 downto 0);
         
@@ -182,7 +200,7 @@ architecture Behavioral of dsed_audio is
         -- FSMD register signal
         signal final_address, next_final_address : UNSIGNED (18 downto 0); -- for recording purposes
         signal act_address, next_act_address : UNSIGNED (18 downto 0); -- for playing purposes
-        signal next_filter_select : STD_LOGIC;
+        signal next_filter_select : STD_LOGIC;        
 
 begin
     -- clk wizard instantiation
@@ -203,7 +221,7 @@ begin
                    micro_data => micro_data, 
                    micro_LR => micro_LR, 
                    play_enable => play_en,
-                   sample_in => from_volume_to_pwm,
+                   sample_in => delayed_sig,
                    sample_request => sample_request,
                    jack_sd => jack_sd,
                    jack_pwm => jack_pwm,
@@ -238,19 +256,32 @@ begin
                    level_up => volume_up,
                    level_down => volume_down,
                    sample_in => signal_speaker,
-                   sample_out => from_volume_to_pwm
---                   to_seven_seg => from_volume_to_seven
+                   sample_out => from_volume_to_pwm,
+                   to_seven_seg => from_volume_to_seven
                 );
                 
     -- seven segment manager instantation
             
---    SEVEN_SEG_MANAGER : seven_segment_manager
---        port map ( clk => clk_12Mhz,
---                   reset => reset,
---                   volume_info => from_volume_to_seven,
---                   an => an,
---                   seven_seg => seven_seg
---               );
+    SEVEN_SEG_MANAGER : seven_segment_manager
+        port map ( clk => clk_12Mhz,
+                   reset => reset,
+                   volume_info => from_volume_to_seven,
+                   level => level,
+                   an => an,
+                   seven_seg => seven_seg
+               );
+
+
+    DELAYING : delay 
+        port map( clk => clk_12Mhz,
+                  reset => reset,
+                  increase => increase,
+                  decrease => decrease,
+                  original_sig => from_volume_to_pwm,
+                  original_sig_ready => sample_request,
+                  delayed_sig => delayed_sig,
+                  actual_level => level
+               );
                
    ena <= '1';
                         

@@ -31,8 +31,8 @@ entity volume_control is
         level_up : in STD_LOGIC;
         level_down : in STD_LOGIC;
         sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
-        sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0)
---        to_seven_seg : out STD_LOGIC_VECTOR (6 downto 0) -- Sent to the 7 segment manager
+        sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
+        to_seven_seg : out STD_LOGIC_VECTOR (6 downto 0) -- Sent to the 7 segment manager
     );
 end volume_control;
 

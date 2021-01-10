@@ -47,21 +47,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.cache/ip}} [current_project]
+  set_property webtalk.parent_dir D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.cache/wt [current_project]
+  set_property parent.project_path D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.xpr [current_project]
+  set_property ip_output_repo D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.runs/synth_2/dsed_audio.dcp}}
-  read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
-  set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
-  read_ip -quiet {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}
-  set_property is_locked true [get_files {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci}}]
-  read_xdc {{C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc}}
+  add_files -quiet D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_2/dsed_audio.dcp
+  read_ip -quiet D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  set_property is_locked true [get_files D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+  read_ip -quiet D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci
+  set_property is_locked true [get_files D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci]
+  read_xdc {{D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc}}
   link_design -top dsed_audio -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -130,25 +129,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  catch { write_mem_info -force dsed_audio.mmi }
-  write_bitstream -force dsed_audio.bit 
-  catch {write_debug_probes -no_partial_ltxfile -quiet -force debug_nets}
-  catch {file copy -force debug_nets.ltx dsed_audio.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
