@@ -1,19 +1,20 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Grupo 9
+-- Engineer: CJLL & ITI
 -- 
 -- Create Date: 08.01.2021 17:34:48
 -- Design Name: 
 -- Module Name: delay - Behavioral
--- Project Name: 
+-- Project Name: Sistema de grabación, tratamiento y reproducción de audio
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
+-- Description: This module introduces a variable delay
 -- 
 -- Dependencies: 
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
+-- Revision 1.00 - File finished
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -23,15 +24,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.package_dsed.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.NUMERIC_STD.ALL;
 
 entity delay is
     Port (
@@ -49,8 +42,7 @@ end delay;
 architecture Behavioral of delay is
 
     -- Signals 
---        signal next_count, count, max_count : unsigned(22 downto 0) := (others => '0');
-        signal next_count, count : unsigned(2 downto 0) := (others => '0');
+        signal next_count, count, max_count : unsigned(22 downto 0) := (others => '0');
         
         signal level, next_level : unsigned(4 downto 0) := (others => '0');
         
@@ -172,8 +164,8 @@ begin
     -- Next state logic
         next_count <= count + 1;
                       
-        next_level <= level + 1 when increase = '1' and level /= max_level and count = 1 else -- It doesn't matther when the button is checked 
-                      level - 1 when decrease = '1' and level /= min_level and count = 1 else -- as lolg as there is no conflict with "reset"
+        next_level <= level + 1 when increase = '1' and level /= max_level and count = 10 else -- It doesn't matter when the button is checked 
+                      level - 1 when decrease = '1' and level /= min_level and count = 10 else -- as lolg as there is no conflict with "reset"
                       level;
                       
         next_additive <= reg1 when level = 1 else

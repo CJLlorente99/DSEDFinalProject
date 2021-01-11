@@ -1,19 +1,20 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Grupo 9
+-- Engineer: CJLL & ITI
 -- 
 -- Create Date: 05.01.2021 12:48:00
 -- Design Name: 
 -- Module Name: volume_control - Behavioral
--- Project Name: 
+-- Project Name: Sistema de grabación, tratamiento y reproducción de audio
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
+-- Description: This module regulates volume with variable levels as input
 -- 
 -- Dependencies: 
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
+-- Revision 1.00 - File finished
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -40,13 +41,13 @@ architecture Behavioral of volume_control is
     -- Signal declaration
         -- Registers
         signal level, next_level : UNSIGNED(4 downto 0);
-        
+                
         -- Unsigned to compute easily
         signal sample_out_unsig : UNSIGNED(sample_size+factor_size-1 downto 0);
         signal sample_in_unsig : UNSIGNED (sample_size-1 downto 0);
         signal factor : UNSIGNED(factor_size-1 downto 0);
         
-        signal count, next_count : UNSIGNED (10 downto 0); -- CAMBIAR
+        signal count, next_count : UNSIGNED (21 downto 0); -- CAMBIAR
         signal enable : STD_LOGIC;
 
 begin    
@@ -66,7 +67,7 @@ begin
         
     -- Next-state logic
     
-        next_level <= level + 1 when level_up = '1' and level < 20 else
+        next_level <= level + 1 when level_up = '1'  and level < 20 else
                       level - 1 when level_down = '1' and level > 0 else
                       level;
                       
@@ -107,6 +108,6 @@ begin
         sample_out <= (others => '1') when sample_out_unsig(sample_size+factor_size-1 downto sample_size+factor_size-4) /= 0 else -- POSITIVE SATURATION
                       std_logic_vector(sample_out_unsig(sample_size+factor_size-5 downto factor_size-4)); 
                       
---        to_seven_seg <= "00" & std_logic_vector(level);
+        to_seven_seg <= "00" & std_logic_vector(level);
         
 end Behavioral;

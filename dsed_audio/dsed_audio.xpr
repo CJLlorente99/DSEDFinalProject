@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="D:/Vivado/Laboratorios/final_project/DSEDFinalProject/dsed_audio/dsed_audio.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="57c794d15a2945ca9f5ce459fb299daf"/>
+    <Option Name="Id" Val="3a982f6d9cc642c9aa27cd1f6cc050c9"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -30,20 +30,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="216"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="3"/>
-    <Option Name="WTModelSimExportSim" Val="3"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
-    <Option Name="WTIesExportSim" Val="3"/>
-    <Option Name="WTVcsExportSim" Val="3"/>
-    <Option Name="WTRivieraExportSim" Val="3"/>
-    <Option Name="WTActivehdlExportSim" Val="3"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -55,7 +55,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/blk_mem_gen_0/blk_mem_gen_0.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/blk_mem_gen_0/blk_mem_gen_0.xci"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -64,7 +64,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/clk_wiz_12mhz/clk_wiz_12mhz.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/clk_wiz_12mhz/clk_wiz_12mhz.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/clk_wiz_12mhz/clk_wiz_12mhz.xci"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -73,23 +73,23 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/package_dsed.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/package_dsed.vhd"/>
-          <Attr Name="ImportTime" Val="1609885294"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/package_dsed.vhd"/>
+          <Attr Name="ImportTime" Val="1610362046"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/FSMD_microphone.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/FSMD_microphone.vhd"/>
-          <Attr Name="ImportTime" Val="1609789895"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/FSMD_microphone.vhd"/>
+          <Attr Name="ImportTime" Val="1610045177"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/audio_interface.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/audio_interface.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/audio_interface.vhd"/>
           <Attr Name="ImportTime" Val="1609791011"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -97,7 +97,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/average_power_display.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/average_power_display.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/average_power_display.vhd"/>
           <Attr Name="ImportTime" Val="1609789895"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -105,29 +105,31 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/controlador_fir.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/controlador_fir.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/controlador_fir.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/delay.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/delay.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/delay.vhd"/>
+          <Attr Name="ImportTime" Val="1610362227"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/enable_generator.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/enable_generator.vhd"/>
-          <Attr Name="ImportTime" Val="1609789895"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/enable_generator.vhd"/>
+          <Attr Name="ImportTime" Val="1610045177"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/fir_data_path.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/fir_data_path.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/fir_data_path.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -135,7 +137,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/fir_filter.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/fir_filter.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/fir_filter.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -143,7 +145,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/half_mul.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/half_mul.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/half_mul.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -151,32 +153,42 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/pwm.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/pwm.vhd"/>
-          <Attr Name="ImportTime" Val="1609789873"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/pwm.vhd"/>
+          <Attr Name="ImportTime" Val="1610045177"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/seven_segment_manager.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/seven_segment_manager.vhd"/>
-          <Attr Name="ImportTime" Val="1609886262"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/seven_segment_manager.vhd"/>
+          <Attr Name="ImportTime" Val="1610362117"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/volume_control.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/volume_control.vhd"/>
-          <Attr Name="ImportTime" Val="1609884270"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/volume_control.vhd"/>
+          <Attr Name="ImportTime" Val="1610362194"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhd files/dsed_audio.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/dsed_audio.vhd"/>
-          <Attr Name="ImportTime" Val="1609790928"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/dsed_audio.vhd"/>
+          <Attr Name="ImportTime" Val="1610362208"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/controlador.vhd">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/controlador.vhd"/>
+          <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -184,7 +196,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/prueba_in_out_audio.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/prueba_in_out_audio.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/prueba_in_out_audio.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -199,8 +211,8 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/Nexys4DDR_Master.xdc"/>
-          <Attr Name="ImportTime" Val="1609783512"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/Nexys4DDR_Master.xdc"/>
+          <Attr Name="ImportTime" Val="1610357474"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -210,18 +222,10 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/delay_tb.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/dsed_audio_2_tb.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/vhd files/pwm_tb.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/pwm_tb.vhd"/>
-          <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/dsed_audio_2_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1610357405"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -229,7 +233,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/FSMD_microphone_SOR_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/FSMD_microphone_SOR_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/FSMD_microphone_SOR_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -238,7 +242,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/FSMD_microphone_SO_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/FSMD_microphone_SO_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/FSMD_microphone_SO_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -247,7 +251,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/audio_interface_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/audio_interface_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/audio_interface_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -256,7 +260,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/average_power_display_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/average_power_display_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/average_power_display_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -265,8 +269,17 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/controlador_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/controlador_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/controlador_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/delay_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/delay_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1610355437"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -274,8 +287,8 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/dsed_audio_1_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/dsed_audio_1_tb.vhd"/>
-          <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/dsed_audio_1_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1610357405"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -283,7 +296,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/enable_generator_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/enable_generator_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/enable_generator_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -292,7 +305,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/fir_filter_2_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/fir_filter_2_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/fir_filter_2_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -301,7 +314,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/fir_filter_3_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/fir_filter_3_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/fir_filter_3_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -310,7 +323,7 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/fir_filter_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/fir_filter_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/fir_filter_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -319,7 +332,16 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/half_mul_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/half_mul_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/half_mul_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/pwm_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/pwm_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -328,24 +350,24 @@
       <File Path="$PSRCDIR/sources_1/imports/vhd files/ram_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/ram_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/ram_tb.vhd"/>
           <Attr Name="ImportTime" Val="1609781743"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/vhd files/controlador.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/vhd files/volume_control_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../vhd files/controlador.vhd"/>
-          <Attr Name="ImportTime" Val="1609781743"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../vhd files/volume_control_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1610100638"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="delay_tb"/>
+        <Option Name="TopModule" Val="dsed_audio_2_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -372,26 +394,21 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="synth_2" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_2" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." SynthRun="synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -402,23 +419,6 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_2" SynthRun="synth_2" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
