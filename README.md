@@ -9,21 +9,22 @@ La funcionalidad de este proyecto es la de crear un sistema de grabación, trata
 ## ¿Cómo usar?
 
 El sistema se maneja a través de los siguientes controles
-	- SW 12 -> reset
-	- SW 13 -> clear RAM
-	- SW 14 -> grabación de audio
-	- SW 15 -> reproducción según la posición indicada en SW 0 y SW 1
+- SW 12 -> reset
+- SW 13 -> clear RAM
+- SW 14 -> grabación de audio
+- SW 15 -> reproducción según la posición indicada en SW 0 y SW 1
 	
-| SW0 | SW1 | reproduccion |
-| 0 | 0 | normal |
-| 1 | 0 | al revés |
-| 0 | 1 | tras filtrado paso bajo |
-| 1 | 1 | tras filtrado paso alto |
+| SW0 | SW1 | reproduccion            |
+| --- | --- | ----------------------- | 
+| 0   | 0   | normal                  |
+| 1   | 0   | al revés                |
+| 0   | 1   | tras filtrado paso bajo |
+| 1   | 1   | tras filtrado paso alto |
 
-	- BTNU -> subir volumen
-	- BTND -> bajar volumen
-	- BTNR -> aumentar reverberación
-	- BTNL -> disminuir reverberación
+- BTNU -> subir volumen
+- BTND -> bajar volumen
+- BTNR -> aumentar reverberación
+- BTNL -> disminuir reverberación
 
 ## Algunos apuntes acerca de la funcionalidad
 
