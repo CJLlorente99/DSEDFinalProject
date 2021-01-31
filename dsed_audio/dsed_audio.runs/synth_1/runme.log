@@ -1,0 +1,780 @@
+
+*** Running vivado
+    with args -log dsed_audio.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dsed_audio.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source dsed_audio.tcl -notrace
+Command: synth_design -top dsed_audio -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10820 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 307.527 ; gain = 74.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'dsed_audio' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:58]
+INFO: [Synth 8-3491] module 'clk_wiz_12mhz' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/realtime/clk_wiz_12mhz_stub.vhdl:5' bound to instance 'CLK_WIZ' of component 'clk_wiz_12mhz' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_12mhz' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/realtime/clk_wiz_12mhz_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:28' bound to instance 'AUDIO_INTER' of component 'audio_interface' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'audio_interface' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:55]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd:28' bound to instance 'PWM_CONVERTER' of component 'pwm' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (1#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd:38]
+INFO: [Synth 8-3491] module 'FSMD_microphone' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/FSMD_microphone.vhd:28' bound to instance 'MICRO_SAMPLER' of component 'FSMD_microphone' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'FSMD_microphone' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/FSMD_microphone.vhd:38]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/FSMD_microphone.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'FSMD_microphone' (2#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/FSMD_microphone.vhd:38]
+INFO: [Synth 8-3491] module 'enable_generator' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/enable_generator.vhd:27' bound to instance 'EN_GENERATOR' of component 'enable_generator' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'enable_generator' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/enable_generator.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'enable_generator' (3#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/enable_generator.vhd:36]
+INFO: [Synth 8-3491] module 'average_power_display' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd:29' bound to instance 'POWER_LEDS' of component 'average_power_display' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'average_power_display' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'average_power_display' (4#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'audio_interface' (5#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/audio_interface.vhd:55]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'RAM' of component 'blk_mem_gen_0' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:254]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'fir_filter' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd:27' bound to instance 'FILTER' of component 'fir_filter' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:264]
+INFO: [Synth 8-638] synthesizing module 'fir_filter' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd:37]
+INFO: [Synth 8-3491] module 'fir_data_path' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:27' bound to instance 'FILTERING_PROCESS' of component 'fir_data_path' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'fir_data_path' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:38]
+INFO: [Synth 8-3491] module 'half_mul' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/half_mul.vhd:28' bound to instance 'U0' of component 'half_mul' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'half_mul' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/half_mul.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'half_mul' (6#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/half_mul.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element c3_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element c4_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'fir_data_path' (7#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_data_path.vhd:38]
+INFO: [Synth 8-3491] module 'controlador_fir' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:27' bound to instance 'CONTROLADOR' of component 'controlador_fir' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'controlador_fir' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'controlador_fir' (8#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter' (9#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/fir_filter.vhd:37]
+INFO: [Synth 8-3491] module 'volume_control' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:28' bound to instance 'VOLUME' of component 'volume_control' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'volume_control' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'volume_control' (10#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:40]
+INFO: [Synth 8-3491] module 'seven_segment_manager' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/seven_segment_manager.vhd:28' bound to instance 'SEVEN_SEG_MANAGER' of component 'seven_segment_manager' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'seven_segment_manager' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/seven_segment_manager.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/seven_segment_manager.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'seven_segment_manager' (11#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/seven_segment_manager.vhd:40]
+INFO: [Synth 8-3491] module 'delay' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:29' bound to instance 'DELAYING' of component 'delay' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'delay' (12#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:42]
+INFO: [Synth 8-3491] module 'sec_left' declared at 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/sec_left.vhd:27' bound to instance 'SECS_LEFT' of component 'sec_left' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'sec_left' [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/sec_left.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'sec_left' (13#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/sec_left.vhd:43]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (14#1) [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:58]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[4]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[3]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[2]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[1]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 380.668 ; gain = 147.547
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 380.668 ; gain = 147.547
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'RAM'
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp7/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp7/clk_wiz_12mhz_in_context.xdc] for cell 'CLK_WIZ'
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/constrs_1/imports/vhd files/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dsed_audio_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dsed_audio_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 701.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 701.613 ; gain = 468.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 701.613 ; gain = 468.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp7/clk_wiz_12mhz_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  {C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/.Xil/Vivado-16044-LAPTOP-C5U9VH29/dcp7/clk_wiz_12mhz_in_context.xdc}, line 4).
+Applied set_property DONT_TOUCH = true for CLK_WIZ. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for RAM. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 701.613 ; gain = 468.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "next_sample" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "next_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "next_first_cycle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "next_sample_out_unsig" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "en_4_cycles" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "LED_output" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controlador_fir'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:61]
+INFO: [Synth 8-5544] ROM "next_sample_out_ready" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:62]
+INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element level_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:58]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:59]
+INFO: [Synth 8-5546] ROM "act_info[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "act_info[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_rotating_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/sec_left.vhd:63]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dsed_audio'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:332]
+INFO: [Synth 8-5546] ROM "play_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "is_recording" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "record_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:61]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              111
+                      s0 |                              001 |                              000
+                      s1 |                              010 |                              001
+                      s2 |                              011 |                              010
+                      s3 |                              100 |                              011
+                      s4 |                              101 |                              100
+                      s5 |                              110 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'controlador_fir'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/controlador_fir.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:332]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:332]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                 filter1 |                              101 |                              001
+                 filter2 |                              111 |                              010
+            play_forward |                              011 |                              110
+            play_reverse |                              100 |                              111
+         record_sampling |                              010 |                              011
+             record_save |                              110 |                              100
+               reset_mem |                              001 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dsed_audio'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:332]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 701.613 ; gain = 468.492
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     23 Bit       Adders := 1     
+	   3 Input     19 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 3     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 52    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 9     
+	   2 Input     19 Bit        Muxes := 14    
+	   8 Input     19 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 1     
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 17    
+	   3 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 5     
+	  42 Input      7 Bit        Muxes := 9     
+	  44 Input      7 Bit        Muxes := 19    
+	  43 Input      7 Bit        Muxes := 11    
+	  41 Input      7 Bit        Muxes := 2     
+	  23 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 13    
+	   4 Input      5 Bit        Muxes := 2     
+	  43 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  52 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 59    
+	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	  21 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dsed_audio 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 3     
++---Registers : 
+	               19 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 14    
+	   8 Input     19 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	  52 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 39    
+	   8 Input      1 Bit        Muxes := 9     
+Module pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FSMD_microphone 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 9     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module enable_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module average_power_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module half_mul 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+Module fir_data_path 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
++---Muxes : 
+	   6 Input     15 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module controlador_fir 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+Module fir_filter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module volume_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module seven_segment_manager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               14 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 4     
+	  42 Input      7 Bit        Muxes := 9     
+	  44 Input      7 Bit        Muxes := 19    
+	  43 Input      7 Bit        Muxes := 11    
+	  41 Input      7 Bit        Muxes := 2     
+	  23 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 13    
+	   4 Input      5 Bit        Muxes := 2     
+	  43 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+Module delay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 40    
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 1     
+Module sec_left 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     19 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "next_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "PWM_CONVERTER/next_sample" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "POWER_LEDS/LED_output" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element PWM_CONVERTER/count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/pwm.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element POWER_LEDS/count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element POWER_LEDS/total_power_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/average_power_display.vhd:51]
+INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element level_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/volume_control.vhd:58]
+DSP Report: Generating DSP sample_out_unsig, operation Mode is: A*B.
+DSP Report: operator sample_out_unsig is absorbed into DSP sample_out_unsig.
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element level_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/delay.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/sec_left.vhd:63]
+DSP Report: Generating DSP seconds_recorded, operation Mode is: A*(B:0x69).
+DSP Report: operator seconds_recorded is absorbed into DSP seconds_recorded.
+DSP Report: Generating DSP seconds_played, operation Mode is: A*(B:0x69).
+DSP Report: operator seconds_played is absorbed into DSP seconds_played.
+INFO: [Synth 8-5546] ROM "play_en" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[4]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[3]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[2]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[1]
+WARNING: [Synth 8-3331] design seven_segment_manager has unconnected port secs_played[0]
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[8]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[9]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[6]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[7]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[13]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[12]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[12]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[11]'
+INFO: [Synth 8-3886] merging instance 'SEVEN_SEG_MANAGER/rotating_count_reg[10]' (FDCE) to 'SEVEN_SEG_MANAGER/rotating_count_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEVEN_SEG_MANAGER/rotating_count_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (SEVEN_SEG_MANAGER/rotating_count_reg[11]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg1_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg1_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg2_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg2_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg3_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg3_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg4_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg4_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg5_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg5_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg6_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg6_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg7_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg7_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg8_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg8_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg9_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg9_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg10_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg10_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg11_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg11_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg12_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg12_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg13_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg13_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg14_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg14_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg15_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg15_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg16_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg16_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg17_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg17_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg18_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg18_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg19_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg19_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg20_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg20_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg21_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg21_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg22_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg22_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg23_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg23_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg24_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg24_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg25_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg25_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg26_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg26_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg27_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg27_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg28_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg28_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg29_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg29_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg30_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg30_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg31_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg31_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg32_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg32_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg33_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg33_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg34_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg34_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg35_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg35_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg36_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg36_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg37_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg37_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg38_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg38_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg39_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/reg39_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/additive_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (DELAYING/additive_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (SECS_LEFT/seconds_left_playing_reg[4]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (SECS_LEFT/seconds_left_playing_reg[3]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (SECS_LEFT/seconds_left_playing_reg[2]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (SECS_LEFT/seconds_left_playing_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (SECS_LEFT/seconds_left_playing_reg[0]) is unused and will be removed from module dsed_audio.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 788.387 ; gain = 555.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|seven_segment_manager | p_0_out    | 128x7         | LUT            | 
+|volume_control        | p_0_out    | 32x11         | LUT            | 
+|seven_segment_manager | p_0_out    | 128x7         | LUT            | 
++----------------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|volume_control | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sec_left       | A*(B:0x69)  | 19     | 7      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sec_left       | A*(B:0x69)  | 19     | 7      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'CLK_WIZ/clk_12Mhz' to pin 'CLK_WIZ/bbstub_clk_12Mhz/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:11 . Memory (MB): peak = 788.387 ; gain = 555.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.srcs/sources_1/imports/vhd files/dsed_audio.vhd:316]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:01:56 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_12mhz |         1|
+|2     |blk_mem_gen_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |blk_mem_gen_0_bbox |     1|
+|2     |clk_wiz_12mhz_bbox |     1|
+|3     |CARRY4             |   106|
+|4     |DSP48E1            |     2|
+|5     |LUT1               |   159|
+|6     |LUT2               |   204|
+|7     |LUT3               |   224|
+|8     |LUT4               |   183|
+|9     |LUT5               |   309|
+|10    |LUT6               |  1596|
+|11    |MUXF7              |    89|
+|12    |MUXF8              |     7|
+|13    |FDCE               |   590|
+|14    |FDPE               |    10|
+|15    |FDRE               |    38|
+|16    |IBUF               |    11|
+|17    |OBUF               |    27|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------------+------+
+|      |Instance              |Module                |Cells |
++------+----------------------+----------------------+------+
+|1     |top                   |                      |  3564|
+|2     |  AUDIO_INTER         |audio_interface       |   692|
+|3     |    EN_GENERATOR      |enable_generator      |     5|
+|4     |    MICRO_SAMPLER     |FSMD_microphone       |   404|
+|5     |    POWER_LEDS        |average_power_display |    62|
+|6     |    PWM_CONVERTER     |pwm                   |   221|
+|7     |  DELAYING            |delay                 |   410|
+|8     |  FILTER              |fir_filter            |   277|
+|9     |    CONTROLADOR       |controlador_fir       |   105|
+|10    |    FILTERING_PROCESS |fir_data_path         |   171|
+|11    |      U0              |half_mul              |    58|
+|12    |  SECS_LEFT           |sec_left              |   104|
+|13    |  SEVEN_SEG_MANAGER   |seven_segment_manager |  1713|
+|14    |  VOLUME              |volume_control        |   138|
++------+----------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 110 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:27 ; elapsed = 00:01:39 . Memory (MB): peak = 960.965 ; gain = 406.898
+Synthesis Optimization Complete : Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 960.965 ; gain = 727.844
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+112 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:02:03 . Memory (MB): peak = 960.965 ; gain = 735.617
+INFO: [Common 17-1381] The checkpoint 'C:/Users/carlo/Documents/Universidad/Cuarto curso/Primer Semestre/Diseo de sistemas electrnicos digitales/Proyecto final/ProyectoFinal/DSEDFinalProject/dsed_audio/dsed_audio.runs/synth_1/dsed_audio.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 960.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 28 13:54:37 2021...
